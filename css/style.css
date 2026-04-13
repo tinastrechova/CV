@@ -39,7 +39,6 @@
 .header-logo img {
   display: block;
   height: 50px;
-  filter: invert(1);
 }
 
 /* Language switcher */
