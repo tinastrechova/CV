@@ -28,7 +28,16 @@
     </div>
   </header>
 
-  <div id="menu-overlay"></div>
+  <div id="menu-overlay" role="dialog" aria-modal="true" aria-label="Navigace" aria-hidden="true">
+    <button id="menu-close" aria-label="Zavřít menu">&times;</button>
+    <nav class="menu-nav">
+      <a href="index.html" class="menu-item menu-item--home">
+        <img src="assets/Home.svg" alt="Domů">
+      </a>
+      <a href="cv.html" class="menu-item">CV</a>
+      <a href="kontakty.html" class="menu-item" data-cz="Kontakty" data-en="Contacts">Kontakty</a>
+    </nav>
+  </div>
 
   <main id="home">
   </main>

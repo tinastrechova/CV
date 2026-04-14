@@ -65,16 +65,64 @@
 
 /* Menu overlay */
 #menu-overlay {
-  display: none;
   position: fixed;
-  top: 105px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #fff;
-  z-index: 999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
 #menu-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Close button */
+#menu-close {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Nav items */
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 420px;
+}
+
+.menu-item {
   display: block;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.menu-item:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.menu-item--home img {
+  height: 2.5rem;
+  color: #fff;
 }
