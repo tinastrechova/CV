@@ -19,35 +19,40 @@ btnEn.addEventListener('click', () => setLang('en'));
 // ── Menu overlay ──
 const menuBtn     = document.getElementById('menu-btn');
 const menuOverlay = document.getElementById('menu-overlay');
-const menuClose   = document.getElementById('menu-close');
 
 function openMenu() {
   menuOverlay.classList.add('open');
   menuOverlay.setAttribute('aria-hidden', 'false');
+  menuBtn.classList.add('open');
   menuBtn.setAttribute('aria-expanded', 'true');
-  menuClose.focus();
   startFocusTrap();
 }
 
 function closeMenu() {
   menuOverlay.classList.remove('open');
   menuOverlay.setAttribute('aria-hidden', 'true');
+  menuBtn.classList.remove('open');
   menuBtn.setAttribute('aria-expanded', 'false');
   menuBtn.focus();
   stopFocusTrap();
 }
 
-menuBtn.addEventListener('click', openMenu);
-menuClose.addEventListener('click', closeMenu);
+menuBtn.addEventListener('click', () => {
+  menuOverlay.classList.contains('open') ? closeMenu() : openMenu();
+});
 
 // Zavření přes Escape
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && menuOverlay.classList.contains('open')) closeMenu();
 });
 
-// Zavření kliknutím na pozadí (ne na obsah)
-menuOverlay.addEventListener('click', e => {
-  if (e.target === menuOverlay) closeMenu();
+// Zavření kliknutím mimo overlay
+document.addEventListener('click', e => {
+  if (
+    menuOverlay.classList.contains('open') &&
+    !menuOverlay.contains(e.target) &&
+    !menuBtn.contains(e.target)
+  ) closeMenu();
 });
 
 // ── Focus trap ──
@@ -62,7 +67,6 @@ function handleTrapKeydown(e) {
   const focusable = getFocusable();
   const first = focusable[0];
   const last  = focusable[focusable.length - 1];
-
   if (e.shiftKey) {
     if (document.activeElement === first) { e.preventDefault(); last.focus(); }
   } else {
@@ -72,6 +76,8 @@ function handleTrapKeydown(e) {
 
 function startFocusTrap() {
   menuOverlay.addEventListener('keydown', handleTrapKeydown);
+  const focusable = getFocusable();
+  if (focusable[0]) focusable[0].focus();
 }
 
 function stopFocusTrap() {
