@@ -46,12 +46,14 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && menuOverlay.classList.contains('open')) closeMenu();
 });
 
-// Zavření kliknutím mimo overlay
+// Zavření kliknutím mimo overlay (CZ/EN tlačítka overlay nezavírají)
 document.addEventListener('click', e => {
   if (
     menuOverlay.classList.contains('open') &&
     !menuOverlay.contains(e.target) &&
-    !menuBtn.contains(e.target)
+    !menuBtn.contains(e.target) &&
+    !btnCz.contains(e.target) &&
+    !btnEn.contains(e.target)
   ) closeMenu();
 });
 
