@@ -96,7 +96,7 @@ function zobrazMilnik(index, jazyk) {
   const milnik = milniky[jazyk][index];
   const audioFolder = jazyk === 'cz' ? 'cz' : 'aj';
 
-  document.getElementById('milestone-img').src = 'assets/grafiky/' + milnik.grafika;
+  document.getElementById('milestone-img').src = 'assets/grafiky/' + encodeURIComponent(milnik.grafika);
   document.getElementById('milestone-img').alt  = milnik.nadpis;
   document.getElementById('milestone-rok').textContent  = milnik.rok;
   document.getElementById('milestone-nadpis').innerHTML = milnik.nadpis;
@@ -105,7 +105,7 @@ function zobrazMilnik(index, jazyk) {
   const player = document.getElementById('audio-player');
   const btn    = document.getElementById('audio-btn');
   player.pause();
-  player.src = 'assets/audio/' + audioFolder + '/' + milnik.audio;
+  player.src = 'assets/audio/' + audioFolder + '/' + encodeURIComponent(milnik.audio);
   player.currentTime = 0;
   btn.innerHTML = '<img src="assets/Sound.svg" alt="Přehrát audio" style="height: 1.5rem; width: auto;">';
 }
