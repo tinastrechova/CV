@@ -121,3 +121,46 @@
   display: block;
   padding: 0.5rem 0;
 }
+
+/* ── Milestone section ── */
+#milestone-section {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 120px;
+}
+
+#milestone-image img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+}
+
+#milestone-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#audio-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0;
+}
+
+#milestone-rok {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+#milestone-nadpis {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+#milestone-text {
+  line-height: 1.7;
+  margin-top: 16px;
+}

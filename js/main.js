@@ -2,16 +2,23 @@
 const btnCz = document.getElementById('lang-cz');
 const btnEn = document.getElementById('lang-en');
 
+let currentLang  = localStorage.getItem('lang') || 'cz';
+let currentIndex = 0;
+
 function setLang(lang) {
+  currentLang = lang;
   localStorage.setItem('lang', lang);
   btnCz.classList.toggle('active', lang === 'cz');
   btnEn.classList.toggle('active', lang === 'en');
   document.querySelectorAll('[data-cz]').forEach(el => {
     el.textContent = lang === 'cz' ? el.dataset.cz : el.dataset.en;
   });
+  if (typeof milniky !== 'undefined' && document.getElementById('milestone-section')) {
+    zobrazMilnik(currentIndex, currentLang);
+  }
 }
 
-setLang(localStorage.getItem('lang') || 'cz');
+setLang(currentLang);
 
 btnCz.addEventListener('click', () => setLang('cz'));
 btnEn.addEventListener('click', () => setLang('en'));
@@ -41,12 +48,10 @@ menuBtn.addEventListener('click', () => {
   menuOverlay.classList.contains('open') ? closeMenu() : openMenu();
 });
 
-// Zavření přes Escape
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && menuOverlay.classList.contains('open')) closeMenu();
 });
 
-// Zavření kliknutím mimo overlay (CZ/EN tlačítka overlay nezavírají)
 document.addEventListener('click', e => {
   if (
     menuOverlay.classList.contains('open') &&
@@ -84,4 +89,46 @@ function startFocusTrap() {
 
 function stopFocusTrap() {
   menuOverlay.removeEventListener('keydown', handleTrapKeydown);
+}
+
+// ── Milestone ──
+function zobrazMilnik(index, jazyk) {
+  const milnik = milniky[jazyk][index];
+  const audioFolder = jazyk === 'cz' ? 'cz' : 'aj';
+
+  document.getElementById('milestone-img').src = 'assets/grafiky/' + milnik.grafika;
+  document.getElementById('milestone-img').alt  = milnik.nadpis;
+  document.getElementById('milestone-rok').textContent  = milnik.rok;
+  document.getElementById('milestone-nadpis').innerHTML = milnik.nadpis;
+  document.getElementById('milestone-text').innerHTML   = milnik.text;
+
+  const player = document.getElementById('audio-player');
+  const btn    = document.getElementById('audio-btn');
+  player.pause();
+  player.src = 'assets/audio/' + audioFolder + '/' + milnik.audio;
+  player.currentTime = 0;
+  btn.textContent = '🔊';
+}
+
+// Init na home stránce
+if (typeof milniky !== 'undefined' && document.getElementById('milestone-section')) {
+  currentIndex = Math.floor(Math.random() * milniky[currentLang].length);
+  zobrazMilnik(currentIndex, currentLang);
+
+  const audioPlayer = document.getElementById('audio-player');
+  const audioBtn    = document.getElementById('audio-btn');
+
+  audioBtn.addEventListener('click', () => {
+    if (audioPlayer.paused) {
+      audioPlayer.play();
+      audioBtn.textContent = '⏸';
+    } else {
+      audioPlayer.pause();
+      audioBtn.textContent = '🔊';
+    }
+  });
+
+  audioPlayer.addEventListener('ended', () => {
+    audioBtn.textContent = '🔊';
+  });
 }
