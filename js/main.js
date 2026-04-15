@@ -107,7 +107,7 @@ function zobrazMilnik(index, jazyk) {
   player.pause();
   player.src = 'assets/audio/' + audioFolder + '/' + milnik.audio;
   player.currentTime = 0;
-  btn.textContent = '🔊';
+  btn.innerHTML = '<img src="assets/Sound.svg" alt="Přehrát audio" style="height: 1.5rem; width: auto;">';
 }
 
 // Init na home stránce
@@ -124,11 +124,11 @@ if (typeof milniky !== 'undefined' && document.getElementById('milestone-section
       audioBtn.textContent = '⏸';
     } else {
       audioPlayer.pause();
-      audioBtn.textContent = '🔊';
+      audioBtn.innerHTML = '<img src="assets/Sound.svg" alt="Přehrát audio" style="height: 1.5rem; width: auto;">';
     }
   });
 
   audioPlayer.addEventListener('ended', () => {
-    audioBtn.textContent = '🔊';
+    audioBtn.innerHTML = '<img src="assets/Sound.svg" alt="Přehrát audio" style="height: 1.5rem; width: auto;">';
   });
 }
