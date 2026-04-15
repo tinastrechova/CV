@@ -96,8 +96,20 @@ function zobrazMilnik(index, jazyk) {
   const milnik = milniky[jazyk][index];
   const audioFolder = jazyk === 'cz' ? 'cz' : 'aj';
 
-  document.getElementById('milestone-img').src = 'assets/grafiky/' + encodeURIComponent(milnik.grafika);
-  document.getElementById('milestone-img').alt  = milnik.nadpis;
+  const img = document.getElementById('milestone-img');
+  const grafika = milnik.grafika.normalize('NFC');
+  const dotIdx = grafika.lastIndexOf('.');
+  const encodedBase = 'assets/grafiky/' + encodeURIComponent(dotIdx !== -1 ? grafika.slice(0, dotIdx) : grafika);
+  const origExt = dotIdx !== -1 ? grafika.slice(dotIdx) : '';
+  const tryExts = [origExt, '.png', '.jpg'].filter((v, i, a) => v && a.indexOf(v) === i);
+  let extIdx = 0;
+  img.onerror = function() {
+    extIdx++;
+    if (extIdx < tryExts.length) this.src = encodedBase + tryExts[extIdx];
+    else this.onerror = null;
+  };
+  img.src = encodedBase + tryExts[0];
+  img.alt = milnik.nadpis;
   document.getElementById('milestone-rok').textContent  = milnik.rok;
   document.getElementById('milestone-nadpis').innerHTML = milnik.nadpis;
   document.getElementById('milestone-text').innerHTML   = milnik.text;
@@ -105,7 +117,7 @@ function zobrazMilnik(index, jazyk) {
   const player = document.getElementById('audio-player');
   const btn    = document.getElementById('audio-btn');
   player.pause();
-  player.src = 'assets/audio/' + audioFolder + '/' + encodeURIComponent(milnik.audio);
+  player.src = 'assets/audio/' + audioFolder + '/' + encodeURIComponent(milnik.audio.normalize('NFC'));
   player.currentTime = 0;
   btn.innerHTML = '<img src="assets/Sound.svg" alt="Přehrát audio" style="height: 1.5rem; width: auto;">';
 }
