@@ -135,7 +135,7 @@ body {
 
 #milestone-image img {
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   display: block;
   margin: 0 auto;
 }
@@ -158,9 +158,14 @@ body {
   color: #666;
 }
 
+#milestone-content {
+  text-align: left;
+}
+
 #milestone-nadpis {
   font-size: 1.4rem;
   margin: 0;
+  text-align: left;
 }
 
 #milestone-text {
