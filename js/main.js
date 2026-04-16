@@ -11,7 +11,7 @@ function setLang(lang) {
   btnCz.classList.toggle('active', lang === 'cz');
   btnEn.classList.toggle('active', lang === 'en');
   document.querySelectorAll('[data-cz]').forEach(el => {
-    el.textContent = lang === 'cz' ? el.dataset.cz : el.dataset.en;
+    el.innerHTML = lang === 'cz' ? el.dataset.cz : el.dataset.en;
   });
   if (typeof milniky !== 'undefined' && document.getElementById('milestone-section')) {
     zobrazMilnik(currentIndex, currentLang);
