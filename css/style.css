@@ -268,8 +268,8 @@ body {
 
 .deco-stars--left {
   position: absolute;
-  left: -160px;
-  top: calc(50% + 15px);
+  left: -280px;
+  top: calc(50% + 45px);
   transform: translateY(-50%);
   width: 300px;
   height: auto;
