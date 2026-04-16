@@ -131,6 +131,9 @@ body {
   max-width: 700px;
   margin: 0 auto;
   padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 #milestone-image {
@@ -216,6 +219,8 @@ body {
   display: block;
   position: relative;
   z-index: 1;
+  max-height: 120px;
+  object-fit: contain;
 }
 
 #timeline-head {
