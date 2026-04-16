@@ -216,7 +216,7 @@ body {
   cursor: grab;
   transform: translateX(-50%) translateY(-50%);
   transition: left 0.3s ease;
-  mix-blend-mode: multiply;
+  mix-blend-mode: normal;
   z-index: 100;
 }
 
