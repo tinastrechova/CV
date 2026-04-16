@@ -144,7 +144,7 @@ body {
 
 #timeline-instructions {
   position: absolute;
-  bottom: 8px;
+  bottom: -20px;
   width: 280px;
   font-size: 16px;
   line-height: 1.4;
@@ -152,7 +152,7 @@ body {
   color: #000;
   margin: 0;
   padding: 0;
-  left: -320px;
+  left: -120px;
 }
 
 #milestone-image img {
