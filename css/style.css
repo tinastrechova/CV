@@ -258,8 +258,8 @@ body {
 
 .deco-stars--top {
   position: fixed;
-  top: -20px;
-  right: -30px;
+  top: -40px;
+  right: -50px;
   width: 400px;
   height: auto;
   z-index: 1001;
