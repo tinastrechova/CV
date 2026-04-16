@@ -151,7 +151,11 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: #000;
   margin: 0;
-  padding: 0;
+  padding: 0 16px 8px 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  text-align: left;
 }
 
 #milestone-image img {
