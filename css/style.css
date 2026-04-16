@@ -165,7 +165,7 @@ body {
 
 #milestone-content {
   max-width: 500px;
-  margin: 8px auto 0;
+  margin: 0 auto;
   position: relative;
   padding-left: 0;
   padding-top: 0;
@@ -219,7 +219,7 @@ body {
   width: calc(100% + 200px);
   max-width: none;
   margin-top: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 0px;
   margin-left: -100px;
   margin-right: -100px;
   position: relative;
