@@ -154,7 +154,7 @@ body {
 #milestone-rok {
   display: block;
   text-align: left;
-  font-size: 48px;
+  font-size: 16px;
   font-weight: 700;
   color: #000;
   margin-bottom: 4px;
@@ -177,7 +177,7 @@ body {
 
 #milestone-nadpis {
   text-align: left;
-  font-size: 86px;
+  font-size: 29px;
   font-weight: 700;
   line-height: 1.1;
   margin: 0 0 12px 0;
@@ -185,7 +185,7 @@ body {
 
 #milestone-text {
   text-align: justify;
-  font-size: 32px;
+  font-size: 11px;
   font-weight: 400;
   line-height: 1.7;
 }
