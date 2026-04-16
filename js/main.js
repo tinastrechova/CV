@@ -143,4 +143,76 @@ if (typeof milniky !== 'undefined' && document.getElementById('milestone-section
   audioPlayer.addEventListener('ended', () => {
     audioBtn.innerHTML = '<img src="assets/Sound.svg" alt="Přehrát audio" style="height: 1.5rem; width: auto;">';
   });
+
+  // ── Timeline ──
+  const timelineTrack = document.getElementById('timeline-track');
+  const timelineHead  = document.getElementById('timeline-head');
+
+  function updateHeadPosition(index) {
+    timelineHead.style.left = (index / 18 * 100) + '%';
+    timelineHead.src = index % 2 !== 0 ? 'assets/hlava_1.png' : 'assets/hlava_2.png';
+  }
+
+  function setMilnikDirect(index) {
+    index = Math.max(0, Math.min(18, index));
+    if (index === currentIndex) return;
+    currentIndex = index;
+    zobrazMilnik(currentIndex, currentLang);
+    updateHeadPosition(currentIndex);
+  }
+
+  function setMilnikFade(index) {
+    index = Math.max(0, Math.min(18, index));
+    if (index === currentIndex) return;
+    const milImg     = document.getElementById('milestone-image');
+    const milContent = document.getElementById('milestone-content');
+    milImg.style.opacity     = '0';
+    milContent.style.opacity = '0';
+    setTimeout(() => {
+      currentIndex = index;
+      zobrazMilnik(currentIndex, currentLang);
+      updateHeadPosition(currentIndex);
+      milImg.style.opacity     = '1';
+      milContent.style.opacity = '1';
+    }, 300);
+  }
+
+  function indexFromX(clientX) {
+    const rect = timelineTrack.getBoundingClientRect();
+    const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
+    return Math.round(x / rect.width * 18);
+  }
+
+  timelineTrack.addEventListener('click', e => {
+    setMilnikFade(indexFromX(e.clientX));
+  });
+
+  timelineHead.addEventListener('mousedown', e => {
+    e.preventDefault();
+    const onMove = e => setMilnikDirect(indexFromX(e.clientX));
+    const onUp   = () => {
+      document.removeEventListener('mousemove', onMove);
+      document.removeEventListener('mouseup', onUp);
+    };
+    document.addEventListener('mousemove', onMove);
+    document.addEventListener('mouseup', onUp);
+  });
+
+  timelineHead.addEventListener('touchstart', e => {
+    e.preventDefault();
+    const onMove = e => setMilnikDirect(indexFromX(e.touches[0].clientX));
+    const onEnd  = () => {
+      timelineHead.removeEventListener('touchmove', onMove);
+      timelineHead.removeEventListener('touchend', onEnd);
+    };
+    timelineHead.addEventListener('touchmove', onMove, { passive: false });
+    timelineHead.addEventListener('touchend', onEnd);
+  }, { passive: false });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') setMilnikFade(currentIndex + 1);
+    if (e.key === 'ArrowLeft')  setMilnikFade(currentIndex - 1);
+  });
+
+  updateHeadPosition(currentIndex);
 }
