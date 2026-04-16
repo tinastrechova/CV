@@ -217,7 +217,7 @@ body {
   width: 80px;
   height: auto;
   cursor: grab;
-  transform: translateX(-50%) translateY(-15%);
+  transform: translateX(-50%) translateY(0%);
   transition: left 0.3s ease;
   mix-blend-mode: normal;
   z-index: 100;
