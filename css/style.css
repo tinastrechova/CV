@@ -137,8 +137,21 @@ body {
 }
 
 #milestone-image {
+  position: relative;
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+#timeline-instructions {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  font-size: 18px;
+  font-style: normal;
+  font-family: 'Open Sans', sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
 }
 
 #milestone-image img {
