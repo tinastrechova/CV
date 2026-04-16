@@ -255,3 +255,23 @@ body {
 #milestone-content {
   transition: opacity 0.3s ease;
 }
+
+.deco-stars--top {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 80px;
+  height: auto;
+  z-index: 500;
+  pointer-events: none;
+}
+
+.deco-stars--left {
+  position: absolute;
+  left: -100px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: auto;
+  pointer-events: none;
+}
