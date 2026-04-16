@@ -203,6 +203,11 @@ body {
   width: 100%;
 }
 
+#timeline-img {
+  position: relative;
+  z-index: 1;
+}
+
 #timeline-head {
   position: absolute;
   top: 50%;
@@ -212,7 +217,7 @@ body {
   transform: translateX(-50%) translateY(-50%);
   transition: left 0.3s ease;
   mix-blend-mode: multiply;
-  z-index: 10;
+  z-index: 100;
 }
 
 #milestone-image,
