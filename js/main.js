@@ -149,7 +149,7 @@ if (typeof milniky !== 'undefined' && document.getElementById('milestone-section
   const timelineHead  = document.getElementById('timeline-head');
 
   function updateHeadPosition(index) {
-    timelineHead.style.left = (index / 18 * 100) + '%';
+    timelineHead.style.left = (5 + index / 18 * 90) + '%';
     timelineHead.src = index % 2 !== 0 ? 'assets/hlava_1.png' : 'assets/hlava_2.png';
   }
 
@@ -180,7 +180,7 @@ if (typeof milniky !== 'undefined' && document.getElementById('milestone-section
   function indexFromX(clientX) {
     const rect = timelineTrack.getBoundingClientRect();
     const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
-    return Math.round(x / rect.width * 18);
+    return Math.round((x / rect.width - 0.05) / 0.9 * 18);
   }
 
   timelineTrack.addEventListener('click', e => {
