@@ -193,8 +193,10 @@ body {
 /* ── Timeline ── */
 #timeline-container {
   width: 100%;
-  max-width: 500px;
+  max-width: 700px;
   margin: 0 auto;
+  margin-left: -100px;
+  margin-right: -100px;
   position: relative;
 }
 
