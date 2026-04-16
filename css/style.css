@@ -133,6 +133,11 @@ body {
   padding-top: 120px;
 }
 
+#milestone-image {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 #milestone-image img {
   width: 100%;
   max-width: 500px;
@@ -142,9 +147,10 @@ body {
 
 #milestone-content {
   max-width: 500px;
-  margin: 0 auto;
+  margin: 8px auto 0;
   position: relative;
   padding-left: 0;
+  padding-top: 0;
 }
 
 #milestone-header {
@@ -194,6 +200,8 @@ body {
 #timeline-container {
   width: calc(100% + 200px);
   max-width: none;
+  margin-top: 8px;
+  margin-bottom: 8px;
   margin-left: -100px;
   margin-right: -100px;
   position: relative;
