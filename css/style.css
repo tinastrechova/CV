@@ -144,7 +144,7 @@ body {
 
 #timeline-instructions {
   position: absolute;
-  bottom: -60px;
+  bottom: -56px;
   width: 280px;
   font-size: 16px;
   line-height: 1.4;
@@ -152,7 +152,7 @@ body {
   color: #000;
   margin: 0;
   padding: 0;
-  left: -235px;
+  left: -231px;
   z-index: 200;
 }
 
