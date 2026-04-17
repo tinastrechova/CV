@@ -365,7 +365,7 @@ body {
 .cv-rok {
   flex-shrink: 0;
   font-size: 14px;
-  color: #747474;
+  color: #000;
   min-width: 80px;
 }
 
