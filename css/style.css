@@ -296,7 +296,7 @@ body {
     width: 50px;
   }
   .deco-stars--top {
-    width: 200px;
+    width: 100px;
   }
   #milestone-content {
     width: 100%;
@@ -356,6 +356,8 @@ body {
   }
   .deco-stars--top {
     width: clamp(100px, 25vw, 267px);
+    right: -100px;
+    top: -10px;
   }
   #milestone-content {
     width: 100%;
