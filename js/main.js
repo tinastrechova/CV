@@ -213,3 +213,99 @@ if (typeof milniky !== 'undefined' && document.getElementById('milestone-section
 
   updateHeadPosition(currentIndex);
 }
+
+// ── CV accordion ──
+if (typeof cvData !== 'undefined' && document.getElementById('cv')) {
+  const cvMain = document.getElementById('cv');
+
+  function renderCV(lang) {
+    cvMain.innerHTML = '';
+    cvData[lang].kategorie1.forEach(sekce => {
+      const section = document.createElement('section');
+      section.className = 'cv-sekce';
+
+      const h2 = document.createElement('h2');
+      h2.className = 'cv-sekce-nadpis';
+      h2.textContent = sekce.sekce;
+      section.appendChild(h2);
+
+      const ul = document.createElement('ul');
+      ul.className = 'cv-accordion';
+
+      sekce.polozky.forEach((polozka, i) => {
+        const li = document.createElement('li');
+        li.className = 'cv-item';
+        const bodyId = 'cv-body-' + i + '-' + sekce.sekce.replace(/\s/g, '-');
+
+        const trigger = document.createElement('div');
+        trigger.className = 'cv-item-trigger';
+        trigger.setAttribute('role', 'button');
+        trigger.setAttribute('tabindex', '0');
+        trigger.setAttribute('aria-expanded', 'false');
+        trigger.setAttribute('aria-controls', bodyId);
+
+        const rok = document.createElement('span');
+        rok.className = 'cv-rok';
+        rok.textContent = polozka.rok;
+
+        const nazev = document.createElement('span');
+        nazev.className = 'cv-nazev';
+        if (polozka.odkaz) {
+          const a = document.createElement('a');
+          a.href = polozka.odkaz;
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+          a.textContent = polozka.nazev;
+          nazev.appendChild(a);
+        } else {
+          nazev.textContent = polozka.nazev;
+        }
+
+        const spec = document.createElement('span');
+        spec.className = 'cv-spec';
+        spec.textContent = polozka.specifikace;
+
+        trigger.appendChild(rok);
+        trigger.appendChild(nazev);
+        trigger.appendChild(spec);
+
+        const body = document.createElement('div');
+        body.className = 'cv-item-body';
+        body.id = bodyId;
+        const p = document.createElement('p');
+        p.textContent = polozka.text;
+        body.appendChild(p);
+
+        function toggleItem(e) {
+          if (e.target.tagName === 'A') return;
+          const isOpen = li.classList.contains('open');
+          li.classList.toggle('open', !isOpen);
+          trigger.setAttribute('aria-expanded', String(!isOpen));
+        }
+
+        trigger.addEventListener('click', toggleItem);
+        trigger.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleItem(e);
+          }
+        });
+
+        li.appendChild(trigger);
+        li.appendChild(body);
+        ul.appendChild(li);
+      });
+
+      section.appendChild(ul);
+      cvMain.appendChild(section);
+    });
+  }
+
+  renderCV(currentLang);
+
+  const origSetLang = setLang;
+  setLang = function(lang) {
+    origSetLang(lang);
+    renderCV(lang);
+  };
+}

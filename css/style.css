@@ -289,6 +289,130 @@ body {
   pointer-events: none;
 }
 
+/* ── CV page ── */
+#cv {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.cv-sekce {
+  margin-bottom: 48px;
+}
+
+.cv-sekce-nadpis {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #000;
+}
+
+.cv-accordion {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cv-item {
+  border-top: 1px solid #000;
+}
+
+.cv-item:last-child {
+  border-bottom: 1px solid #000;
+}
+
+.cv-item-trigger {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 12px 0;
+  text-align: left;
+  font-family: inherit;
+  color: #000;
+}
+
+.cv-item-trigger:focus-visible,
+.cv-item-trigger:focus {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+.cv-rok {
+  flex-shrink: 0;
+  font-size: 14px;
+  color: #747474;
+  min-width: 80px;
+}
+
+.cv-nazev {
+  font-size: 16px;
+  font-weight: 700;
+  flex: 1;
+  text-align: left;
+}
+
+.cv-nazev a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cv-nazev a:hover {
+  opacity: 0.7;
+}
+
+.cv-spec {
+  font-size: 14px;
+  font-style: italic;
+  color: #000;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.cv-item-body {
+  display: none;
+  padding: 0 0 12px 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #000;
+}
+
+.cv-item-body p {
+  margin: 0;
+}
+
+.cv-item.open .cv-item-body {
+  display: block;
+}
+
+@media (max-width: 480px) {
+  #cv {
+    padding-top: 90px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .cv-item-trigger {
+    flex-wrap: wrap;
+    gap: 4px 12px;
+  }
+  .cv-rok {
+    min-width: auto;
+  }
+  .cv-spec {
+    text-align: left;
+    width: 100%;
+  }
+}
+/* ── End CV page ── */
+
 @media (max-width: 480px) {
   #timeline-container {
     width: 100%;
