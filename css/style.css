@@ -174,11 +174,9 @@ body {
 }
 
 #milestone-header {
-  padding-left: 0;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 }
 
 #milestone-rok {
@@ -307,23 +305,17 @@ body {
     box-sizing: border-box;
     overflow-x: hidden;
   }
-  #audio-btn {
-    display: inline-block;
-    margin-right: 8px;
-  }
   #milestone-header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 4px;
   }
-  #audio-btn {
-    order: 2;
-  }
-  #milestone-rok {
-    order: 1;
-  }
+  #milestone-rok { order: 1; }
+  #audio-btn { order: 2; }
+  .nadpis-wrap { order: 3; width: 100%; }
   #milestone-nadpis {
-    order: 3;
+    font-size: 22px;
   }
   .deco-stars--left {
     display: none;
@@ -363,20 +355,13 @@ body {
     box-sizing: border-box;
     overflow-x: hidden;
   }
-  #audio-btn {
-    display: inline-block;
-    margin-right: 8px;
-    order: 2;
-  }
   #milestone-header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 4px;
   }
-  #milestone-rok {
-    order: 1;
-  }
-  #milestone-nadpis {
-    order: 3;
-  }
+  #milestone-rok { order: 1; }
+  #audio-btn { order: 2; }
+  .nadpis-wrap { order: 3; width: 100%; }
 }
