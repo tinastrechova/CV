@@ -307,8 +307,10 @@ body {
 .cv-sekce-nadpis {
   font-size: 24px;
   font-weight: 700;
-  margin: 0 0 8px 0;
+  margin: 0 0 16px 0;
   color: #000;
+  border-bottom: 2px solid #000;
+  padding-bottom: 8px;
 }
 
 .cv-accordion {
@@ -318,11 +320,6 @@ body {
 }
 
 .cv-item {
-  border-top: 1px solid #000;
-}
-
-.cv-item:last-child {
-  border-bottom: 1px solid #000;
 }
 
 .cv-item-trigger {
