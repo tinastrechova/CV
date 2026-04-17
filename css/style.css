@@ -272,8 +272,8 @@ body {
 
 .deco-stars--left {
   position: absolute;
-  left: calc(-25vw + 60px);
-  top: calc(50% + 97.5px);
+  left: calc(-50vw + 50% - 150px);
+  top: 70%;
   transform: translateY(-50%) rotate(90deg);
   width: 300px;
   height: auto;
