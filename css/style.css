@@ -143,17 +143,7 @@ body {
 }
 
 #timeline-instructions {
-  position: absolute;
-  bottom: -56px;
-  width: 280px;
-  font-size: 16px;
-  line-height: 1.4;
-  font-family: 'Open Sans', sans-serif;
-  color: #000;
-  margin: 0;
-  padding: 0;
-  left: -231px;
-  z-index: 200;
+  display: none;
 }
 
 #milestone-image img {
@@ -325,9 +315,10 @@ body {
     display: none;
   }
   #timeline-instructions {
+    display: block;
     position: static;
-    text-align: center;
-    margin: 8px 0;
+    text-align: left;
+    margin: 8px 0 4px 16px;
   }
 }
 
@@ -368,6 +359,12 @@ body {
   #milestone-rok { order: 1; }
   #audio-btn { order: 2; }
   .nadpis-wrap { order: 3; width: 100%; }
+  #timeline-instructions {
+    display: block;
+    position: static;
+    text-align: left;
+    margin: 8px 0 4px 16px;
+  }
 }
 
 @media (min-width: 1025px) {
