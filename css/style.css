@@ -351,13 +351,16 @@ body {
 .cv-arrow {
   display: inline-block;
   margin: 0 8px;
-  transition: transform 0.2s ease;
   font-size: 12px;
   flex-shrink: 0;
 }
 
-.cv-item.open .cv-arrow {
-  transform: rotate(90deg);
+.cv-arrow::before {
+  content: "›";
+}
+
+.cv-item.open .cv-arrow::before {
+  content: "v";
 }
 
 .cv-rok {

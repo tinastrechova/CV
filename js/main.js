@@ -267,7 +267,6 @@ if (typeof cvData !== 'undefined' && document.getElementById('cv')) {
 
         const arrow = document.createElement('span');
         arrow.className = 'cv-arrow';
-        arrow.textContent = '▶';
 
         trigger.appendChild(rok);
         trigger.appendChild(arrow);
