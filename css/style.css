@@ -294,6 +294,7 @@ body {
   }
   #timeline-head {
     width: 50px;
+    z-index: 200;
   }
   #site-header {
     height: 80px;
