@@ -1,6 +1,5 @@
 // ── Language switcher ──
-const btnCz = document.getElementById('lang-cz');
-const btnEn = document.getElementById('lang-en');
+const btnToggle = document.getElementById('lang-toggle');
 
 let currentLang  = localStorage.getItem('lang') || 'cz';
 let currentIndex = 0;
@@ -8,8 +7,7 @@ let currentIndex = 0;
 function setLang(lang) {
   currentLang = lang;
   localStorage.setItem('lang', lang);
-  btnCz.classList.toggle('active', lang === 'cz');
-  btnEn.classList.toggle('active', lang === 'en');
+  btnToggle.textContent = lang === 'cz' ? 'CZ' : 'EN';
   document.querySelectorAll('[data-cz]').forEach(el => {
     el.innerHTML = lang === 'cz' ? el.dataset.cz : el.dataset.en;
   });
@@ -20,8 +18,7 @@ function setLang(lang) {
 
 setLang(currentLang);
 
-btnCz.addEventListener('click', () => setLang('cz'));
-btnEn.addEventListener('click', () => setLang('en'));
+btnToggle.addEventListener('click', () => setLang(currentLang === 'cz' ? 'en' : 'cz'));
 
 // ── Menu overlay ──
 const menuBtn     = document.getElementById('menu-btn');

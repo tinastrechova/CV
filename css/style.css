@@ -298,6 +298,9 @@ body {
   .deco-stars--top {
     width: 100px;
   }
+  .header-logo img {
+    height: 40px;
+  }
   #milestone-content {
     width: 100%;
     margin: 0;
