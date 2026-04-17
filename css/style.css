@@ -329,7 +329,7 @@ body {
   width: 100%;
   background: none;
   border: none;
-  outline: none;
+  outline: none !important;
   cursor: pointer;
   padding: 12px 0;
   text-align: left;
@@ -342,9 +342,10 @@ body {
   color: #000;
 }
 
-.cv-item-trigger:focus {
-  outline: 2px solid #888;
-  outline-offset: 2px;
+.cv-item-trigger:focus,
+.cv-item-trigger:focus-visible {
+  outline: none !important;
+  border: none;
 }
 
 .cv-arrow {
