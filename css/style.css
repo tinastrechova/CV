@@ -374,5 +374,6 @@ body {
   #audio-btn {
     margin-left: -44px;
     position: relative;
+    align-self: center;
   }
 }
