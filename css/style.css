@@ -279,6 +279,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
   #milestone-section {
     padding-left: 16px;
     padding-right: 16px;
@@ -296,5 +299,19 @@ body {
   #milestone-image img {
     width: 100%;
     max-width: 100%;
+  }
+  #milestone-header {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  #timeline-container {
+    overflow: hidden;
+  }
+  #audio-btn {
+    position: static;
+    display: inline-block;
+    margin-right: 8px;
   }
 }
