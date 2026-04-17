@@ -134,6 +134,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0;
+  position: relative;
 }
 
 #milestone-image {
