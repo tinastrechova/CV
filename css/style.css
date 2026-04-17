@@ -320,7 +320,11 @@ body {
     font-size: 22px;
   }
   .deco-stars--left {
-    display: none;
+    position: static;
+    display: block;
+    width: 80px;
+    margin: 20px auto 0;
+    transform: rotate(90deg);
   }
   #timeline-instructions {
     position: static;
@@ -370,6 +374,13 @@ body {
     position: static;
     text-align: left;
     margin: 8px 0 4px 16px;
+  }
+  .deco-stars--left {
+    position: static;
+    display: block;
+    width: 80px;
+    margin: 20px auto 0;
+    transform: rotate(90deg);
   }
 }
 
