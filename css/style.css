@@ -361,6 +361,12 @@ body {
   #milestone-text {
     font-size: 14px;
   }
+  #milestone-section {
+    padding-bottom: 20px;
+  }
+  #milestone-content {
+    padding-bottom: 20px;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 1024px) {
