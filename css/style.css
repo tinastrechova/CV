@@ -335,7 +335,12 @@ body {
   cursor: pointer;
   padding: 12px 0;
   text-align: left;
-  font-family: inherit;
+  font-family: 'Open Sans', sans-serif;
+  color: #000;
+}
+
+.cv-item-trigger * {
+  font-family: 'Open Sans', sans-serif;
   color: #000;
 }
 
@@ -343,6 +348,18 @@ body {
 .cv-item-trigger:focus {
   outline: 2px solid #000;
   outline-offset: 2px;
+}
+
+.cv-arrow {
+  display: inline-block;
+  margin: 0 8px;
+  transition: transform 0.2s ease;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.cv-item.open .cv-arrow {
+  transform: rotate(90deg);
 }
 
 .cv-rok {

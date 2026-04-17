@@ -265,7 +265,12 @@ if (typeof cvData !== 'undefined' && document.getElementById('cv')) {
         spec.className = 'cv-spec';
         spec.textContent = polozka.specifikace;
 
+        const arrow = document.createElement('span');
+        arrow.className = 'cv-arrow';
+        arrow.textContent = '▶';
+
         trigger.appendChild(rok);
+        trigger.appendChild(arrow);
         trigger.appendChild(nazev);
         trigger.appendChild(spec);
 
