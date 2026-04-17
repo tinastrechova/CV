@@ -279,33 +279,6 @@ body {
 }
 
 @media (max-width: 480px) {
-  body {
-    overflow-x: hidden;
-  }
-  #milestone-section {
-    padding-left: 16px;
-    padding-right: 16px;
-    box-sizing: border-box;
-    width: 100%;
-    overflow-x: hidden;
-  }
-  #milestone-content {
-    width: 100%;
-    margin: 0;
-    padding-left: 16px;
-    padding-right: 16px;
-    box-sizing: border-box;
-  }
-  #milestone-image img {
-    width: 100%;
-    max-width: 100%;
-  }
-  #milestone-header {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
   #timeline-container {
     width: 100%;
     margin-left: 0;
@@ -317,19 +290,72 @@ body {
     width: 100%;
     max-width: 100%;
   }
-  #audio-btn {
-    position: static;
-    display: inline-block;
-    margin-right: 8px;
-  }
   #timeline-head {
     width: 50px;
   }
+  #milestone-content {
+    width: 100%;
+    margin: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+  #milestone-section {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  #audio-btn {
+    display: inline-block;
+    margin-right: 8px;
+  }
+  #milestone-header {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .deco-stars--left {
+    display: none;
+  }
+  #timeline-instructions {
+    position: static;
+    text-align: center;
+    margin: 8px 0;
+  }
 }
 
-@media (min-width: 481px) and (max-width: 1366px) {
+@media (min-width: 481px) and (max-width: 1024px) {
+  #timeline-container {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: hidden;
+  }
+  #timeline-img {
+    width: 100%;
+    max-width: 100%;
+  }
   #timeline-head {
     width: 80px;
     height: auto;
+  }
+  #milestone-content {
+    width: 100%;
+    margin: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+  #milestone-section {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  #audio-btn {
+    display: inline-block;
+    margin-right: 8px;
   }
 }
