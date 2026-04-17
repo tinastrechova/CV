@@ -346,6 +346,9 @@ body {
     margin: 8px 0 4px 8px;
     font-size: 13px;
   }
+  #milestone-text {
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 1024px) {
