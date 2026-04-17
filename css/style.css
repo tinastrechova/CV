@@ -175,8 +175,9 @@ body {
 
 #milestone-header {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
 }
 
 #milestone-rok {
@@ -190,6 +191,9 @@ body {
 
 .nadpis-wrap {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 #audio-btn {
