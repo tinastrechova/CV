@@ -369,3 +369,10 @@ body {
   #audio-btn { order: 2; }
   .nadpis-wrap { order: 3; width: 100%; }
 }
+
+@media (min-width: 1025px) {
+  #audio-btn {
+    margin-left: -44px;
+    position: relative;
+  }
+}
