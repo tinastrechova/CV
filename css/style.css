@@ -373,6 +373,7 @@ body {
 @media (min-width: 1025px) {
   #audio-btn {
     margin-left: -44px;
+    margin-top: 8px;
     position: relative;
   }
 }
