@@ -164,12 +164,13 @@ body {
 }
 
 #milestone-content {
-  max-width: 500px;
-  margin: -10px auto 0;
+  width: calc(100% + 200px);
+  max-width: none;
+  margin: -10px -100px 0;
   position: relative;
   padding-left: 0;
   padding-top: 0;
-  padding-bottom: 40px;
+  padding-bottom: 105px;
 }
 
 #milestone-header {
@@ -269,8 +270,8 @@ body {
 
 .deco-stars--left {
   position: absolute;
-  left: calc(-25vw - 25px);
-  top: calc(50% + 65px);
+  left: calc(-25vw + 75px);
+  top: calc(50% + 97.5px);
   transform: translateY(-50%) rotate(90deg);
   width: 300px;
   height: auto;
