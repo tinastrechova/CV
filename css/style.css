@@ -164,9 +164,9 @@ body {
 }
 
 #milestone-content {
-  width: calc(100% + 200px);
+  width: calc(100% + 140px);
   max-width: none;
-  margin: -10px -100px 0;
+  margin: -10px -70px 0;
   position: relative;
   padding-left: 0;
   padding-top: 0;
@@ -270,7 +270,7 @@ body {
 
 .deco-stars--left {
   position: absolute;
-  left: calc(-25vw + 75px);
+  left: calc(-25vw + 60px);
   top: calc(50% + 97.5px);
   transform: translateY(-50%) rotate(90deg);
   width: 300px;
