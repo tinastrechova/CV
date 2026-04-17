@@ -260,12 +260,13 @@ body {
 
 .deco-stars--top {
   position: fixed;
-  top: 0;
-  right: 0;
+  top: -40px;
+  right: -50px;
   width: clamp(100px, 25vw, 400px);
   height: auto;
-  z-index: 1001;
+  z-index: 999;
   pointer-events: none;
+  transform-origin: top right;
 }
 
 .deco-stars--left {
