@@ -126,6 +126,15 @@ body {
   padding: 0.5rem 0;
 }
 
+/* ── Footer ── */
+#site-footer {
+  text-align: right;
+  padding: 16px 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #000;
+}
+
 /* ── Milestone section ── */
 #milestone-section {
   max-width: 700px;
