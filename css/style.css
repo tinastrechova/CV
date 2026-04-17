@@ -307,7 +307,14 @@ body {
     gap: 8px;
   }
   #timeline-container {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     overflow: hidden;
+  }
+  #timeline-img {
+    width: 100%;
+    max-width: 100%;
   }
   #audio-btn {
     position: static;
