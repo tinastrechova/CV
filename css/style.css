@@ -326,3 +326,9 @@ body {
     width: 50px;
   }
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #timeline-head {
+    width: 80px;
+  }
+}
