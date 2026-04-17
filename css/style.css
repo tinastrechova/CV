@@ -322,4 +322,7 @@ body {
     display: inline-block;
     margin-right: 8px;
   }
+  #timeline-head {
+    width: 50px;
+  }
 }
