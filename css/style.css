@@ -266,6 +266,7 @@ body {
   height: auto;
   z-index: 1001;
   pointer-events: none;
+  transform-origin: top right;
 }
 
 .deco-stars--left {
