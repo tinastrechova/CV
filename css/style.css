@@ -295,11 +295,13 @@ body {
   #timeline-head {
     width: 50px;
   }
+  .header-logo img {
+    height: 50px;
+  }
   .deco-stars--top {
     width: 100px;
-  }
-  .header-logo img {
-    height: 40px;
+    right: 70px;
+    top: 70px;
   }
   #milestone-content {
     width: 100%;
