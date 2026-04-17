@@ -302,6 +302,10 @@ body {
   }
   #timeline-track {
     position: relative;
+    overflow: visible;
+  }
+  #timeline-container {
+    overflow: visible;
   }
   #site-header {
     height: 80px;
