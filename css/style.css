@@ -277,3 +277,24 @@ body {
   height: auto;
   pointer-events: none;
 }
+
+@media (max-width: 768px) {
+  #milestone-section {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  #milestone-content {
+    width: 100%;
+    margin: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+  #milestone-image img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
