@@ -351,9 +351,9 @@ body {
 .cv-arrow {
   display: inline-block;
   margin: 0 8px;
-  font-size: 14px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 2;
   flex-shrink: 0;
 }
 
