@@ -143,7 +143,10 @@ body {
 }
 
 #timeline-instructions {
-  display: none;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: 'Open Sans', sans-serif;
+  color: #000;
 }
 
 #milestone-image img {
@@ -315,7 +318,6 @@ body {
     display: none;
   }
   #timeline-instructions {
-    display: block;
     position: static;
     text-align: left;
     margin: 8px 0 4px 16px;
@@ -360,7 +362,6 @@ body {
   #audio-btn { order: 2; }
   .nadpis-wrap { order: 3; width: 100%; }
   #timeline-instructions {
-    display: block;
     position: static;
     text-align: left;
     margin: 8px 0 4px 16px;
