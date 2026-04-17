@@ -1,6 +1,5 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  overflow-x: hidden;
 }
 
 /* ── Header ── */
@@ -129,10 +128,9 @@ body {
 
 /* ── Milestone section ── */
 #milestone-section {
-  max-width: 100%;
+  max-width: 700px;
   margin: 0 auto;
   padding-top: 120px;
-  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -167,7 +165,7 @@ body {
 
 #milestone-content {
   width: calc(100% - 20px);
-  max-width: 500px;
+  max-width: none;
   margin: -10px 10px 0 20px;
   position: relative;
   padding-left: 0;
@@ -221,8 +219,7 @@ body {
 /* ── Timeline ── */
 #timeline-container {
   width: calc(100% + 200px);
-  max-width: 100vw;
-  overflow: hidden;
+  max-width: none;
   margin-top: 8px;
   margin-bottom: 10px;
   margin-left: -100px;
