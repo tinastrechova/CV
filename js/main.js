@@ -361,6 +361,51 @@ if (typeof cvData !== 'undefined' && document.getElementById('cv')) {
     return sec;
   }
 
+  function cv2CollapsibleSection(title) {
+    const sec = document.createElement('section');
+    sec.className = 'cv2-section';
+
+    const header = document.createElement('div');
+    header.className = 'cv-section-header';
+    header.setAttribute('role', 'button');
+    header.setAttribute('tabindex', '0');
+    header.setAttribute('aria-expanded', 'false');
+
+    const h2 = document.createElement('h2');
+    h2.className = 'cv-sekce-nadpis';
+
+    const arrow = document.createElement('span');
+    arrow.className = 'cv-section-arrow';
+    h2.appendChild(arrow);
+    h2.appendChild(document.createTextNode(title));
+
+    const img = document.createElement('img');
+    img.src = 'assets/stars.png';
+    img.alt = '';
+    img.style.cssText = 'height: 3em; width: auto; float: right; margin-top: -1em;';
+    h2.appendChild(img);
+
+    header.appendChild(h2);
+    sec.appendChild(header);
+
+    const body = document.createElement('div');
+    body.className = 'cv-section-body';
+    sec.appendChild(body);
+
+    function toggle() {
+      const open = body.classList.contains('open');
+      body.classList.toggle('open', !open);
+      header.classList.toggle('open', !open);
+      header.setAttribute('aria-expanded', String(!open));
+    }
+    header.addEventListener('click', toggle);
+    header.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+    });
+
+    return { sec, body };
+  }
+
   function renderCV2(lang) {
     const existing = cvMain.querySelector('.cv2-wrapper');
     if (existing) existing.remove();
@@ -412,8 +457,8 @@ if (typeof cvData !== 'undefined' && document.getElementById('cv')) {
     secKomp.appendChild(tagsWrap);
     wrapper.appendChild(secKomp);
 
-    // Reference
-    const secRef = cv2Section(k2.nadpisy.reference);
+    // Reference (collapsible)
+    const { sec: secRef, body: bodyRef } = cv2CollapsibleSection(k2.nadpisy.reference);
     const ulRef = document.createElement('ul');
     ulRef.className = 'cv2-list';
     k2.reference.forEach(r => {
@@ -430,11 +475,11 @@ if (typeof cvData !== 'undefined' && document.getElementById('cv')) {
       li.appendChild(a);
       ulRef.appendChild(li);
     });
-    secRef.appendChild(ulRef);
+    bodyRef.appendChild(ulRef);
     wrapper.appendChild(secRef);
 
-    // Publikace
-    const secPub = cv2Section(k2.nadpisy.publikace);
+    // Publikace (collapsible)
+    const { sec: secPub, body: bodyPub } = cv2CollapsibleSection(k2.nadpisy.publikace);
     const ulPub = document.createElement('ul');
     ulPub.className = 'cv2-list';
     k2.publikace.forEach(p => {
@@ -453,7 +498,7 @@ if (typeof cvData !== 'undefined' && document.getElementById('cv')) {
       li.appendChild(source);
       ulPub.appendChild(li);
     });
-    secPub.appendChild(ulPub);
+    bodyPub.appendChild(ulPub);
     wrapper.appendChild(secPub);
 
     cvMain.appendChild(wrapper);
