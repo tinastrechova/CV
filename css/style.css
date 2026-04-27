@@ -289,6 +289,17 @@ body {
   pointer-events: none;
 }
 
+#cv-stars-left {
+  position: fixed;
+  left: 20px;
+  bottom: 100px;
+  width: 300px;
+  height: auto;
+  transform: rotate(90deg);
+  pointer-events: none;
+  z-index: 10;
+}
+
 /* ── CV kategorie 2 ── */
 .cv2-wrapper {
   margin-top: 48px;
