@@ -436,7 +436,7 @@ body {
   position: absolute;
   width: 120px;
   height: auto;
-  bottom: 0;
+  bottom: -50px;
   left: calc(50% - 60px - 110px);
 }
 
