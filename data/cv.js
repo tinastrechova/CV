@@ -52,7 +52,10 @@ const cvData = {
       ],
       nastroje: [
         { nazev: "Figma", uroven: "Středně pokročilá" },
-        { nazev: "Condens", uroven: "Středně pokročilá" }
+        { nazev: "Condens", uroven: "Středně pokročilá" },
+        { nazev: "Miro", uroven: "Středně pokročilá" },
+        { nazev: "Canva", uroven: "Pokročilá" },
+        { nazev: "Slack / Teams", uroven: "Středně pokročilá" }
       ],
       kompetence: [
         "Kreativita", "Designové myšlení", "Koordinace", "Empatie",
@@ -131,7 +134,10 @@ const cvData = {
       ],
       nastroje: [
         { nazev: "Figma", uroven: "Intermediate" },
-        { nazev: "Condens", uroven: "Intermediate" }
+        { nazev: "Condens", uroven: "Intermediate" },
+        { nazev: "Miro", uroven: "Intermediate" },
+        { nazev: "Canva", uroven: "Advanced" },
+        { nazev: "Slack / Teams", uroven: "Intermediate" }
       ],
       kompetence: [
         "Creativity", "Design thinking", "Coordination", "Empathy",
