@@ -289,6 +289,17 @@ body {
   pointer-events: none;
 }
 
+#cv-title-stars {
+  text-align: left;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+#cv-title-stars img {
+  width: 150px;
+  height: auto;
+}
+
 /* ── CV kategorie 2 ── */
 .cv2-wrapper {
   margin-top: 48px;
