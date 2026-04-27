@@ -467,11 +467,15 @@ if (typeof cvData !== 'undefined' && document.getElementById('cv')) {
       const nameSpan = document.createElement('span');
       nameSpan.className = 'cv2-label';
       nameSpan.textContent = r.jmeno;
+      const desc = document.createElement('span');
+      desc.className = 'cv2-ref-popis';
+      desc.textContent = r.popis;
       const a = document.createElement('a');
       a.href = 'mailto:' + r.email;
       a.className = 'cv2-email';
       a.textContent = r.email;
       li.appendChild(nameSpan);
+      li.appendChild(desc);
       li.appendChild(a);
       ulRef.appendChild(li);
     });

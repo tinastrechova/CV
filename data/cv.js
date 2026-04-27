@@ -59,11 +59,11 @@ const cvData = {
         "Práce v týmu", "Zvědavost", "Zápal", "(Sociální) odpovědnost"
       ],
       reference: [
-        { jmeno: "doc. Mgr. Čeněk Šašinka, Ph.D.", email: "ceneksasinka@gmail.com" },
-        { jmeno: "doc. RNDr. Michal Černý, Ph.D.", email: "mcerny@phil.muni.cz" },
-        { jmeno: "Mgr. Alžběta Šašinková, Ph.D.", email: "asasinkova@phil.muni.cz" },
-        { jmeno: "PhDr. Ladislava Zbiejczuk Suchá, Ph.D.", email: "sucha@phil.muni.cz" },
-        { jmeno: "Mgr. Roman Sellner Novotný, Ph.D.", email: "rnovotny@phil.muni.cz" }
+        { jmeno: "doc. Mgr. Čeněk Šašinka, Ph.D.", email: "ceneksasinka@gmail.com", popis: "Vedoucí mé bakalářské práce a spoluautor článku z ní vzešlého. Výzkumník v oblasti vizuální kognice a VR na FF MUNI." },
+        { jmeno: "doc. RNDr. Michal Černý, Ph.D.", email: "mcerny@phil.muni.cz", popis: "Kolega z projektů TWIST a OP TAK, spoluautor bakalářského článku. Odborník na edTech a digitální humanismus." },
+        { jmeno: "Mgr. Alžběta Šašinková, Ph.D.", email: "asasinkova@phil.muni.cz", popis: "Spolupráce na projektu ASPbelong Lina. Psycholožka a výzkumnice VR ve vzdělávání." },
+        { jmeno: "PhDr. Ladislava Zbiejczuk Suchá, Ph.D.", email: "sucha@phil.muni.cz", popis: "Vedoucí mé diplomové práce a projektů TWIST a OP TAK. Expertka na service design a UX výzkum na KISK FF MUNI." },
+        { jmeno: "Mgr. Roman Sellner Novotný, Ph.D.", email: "rnovotny@phil.muni.cz", popis: "Garant mého magisterského programu, vede mé studentské projekty. Zaměřuje se na service, spekulativní a transition design." }
       ],
       publikace: [
         { nazev: "Collaborative Immersive Virtual Environments in Geography Education on Climate Zones: A UX Case Study", zdroj: "ISPRS International Journal of Geo-Information", odkaz: "https://www.mdpi.com/2220-9964/14/12/455" },
@@ -138,11 +138,11 @@ const cvData = {
         "Teamwork", "Curiosity", "Passion", "(Social) responsibility"
       ],
       reference: [
-        { jmeno: "doc. Mgr. Čeněk Šašinka, Ph.D.", email: "ceneksasinka@gmail.com" },
-        { jmeno: "doc. RNDr. Michal Černý, Ph.D.", email: "mcerny@phil.muni.cz" },
-        { jmeno: "Mgr. Alžběta Šašinková, Ph.D.", email: "asasinkova@phil.muni.cz" },
-        { jmeno: "PhDr. Ladislava Zbiejczuk Suchá, Ph.D.", email: "sucha@phil.muni.cz" },
-        { jmeno: "Mgr. Roman Sellner Novotný, Ph.D.", email: "rnovotny@phil.muni.cz" }
+        { jmeno: "doc. Mgr. Čeněk Šašinka, Ph.D.", email: "ceneksasinka@gmail.com", popis: "Supervisor of my bachelor's thesis and co-author of the resulting article. Researcher in visual cognition and VR at FF MUNI." },
+        { jmeno: "doc. RNDr. Michal Černý, Ph.D.", email: "mcerny@phil.muni.cz", popis: "Colleague on the TWIST and OP TAK projects, co-author of the bachelor's article. Expert in edTech and digital humanism." },
+        { jmeno: "Mgr. Alžběta Šašinková, Ph.D.", email: "asasinkova@phil.muni.cz", popis: "Collaboration on the ASPbelong Lina project. Psychologist and VR in education researcher." },
+        { jmeno: "PhDr. Ladislava Zbiejczuk Suchá, Ph.D.", email: "sucha@phil.muni.cz", popis: "Supervisor of my master's thesis and the TWIST and OP TAK projects. Expert in service design and UX research at KISK FF MUNI." },
+        { jmeno: "Mgr. Roman Sellner Novotný, Ph.D.", email: "rnovotny@phil.muni.cz", popis: "Guarantor of my master's programme, supervises my student projects. Focuses on service, speculative and transition design." }
       ],
       publikace: [
         { nazev: "Collaborative Immersive Virtual Environments in Geography Education on Climate Zones: A UX Case Study", zdroj: "ISPRS International Journal of Geo-Information", odkaz: "https://www.mdpi.com/2220-9964/14/12/455" },

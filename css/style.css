@@ -359,6 +359,14 @@ body {
   border-bottom: none;
 }
 
+.cv2-ref-popis {
+  font-size: 13px;
+  font-style: italic;
+  color: #000;
+  margin-top: 2px;
+  display: block;
+}
+
 .cv2-email {
   color: #000;
   font-size: 13px;
