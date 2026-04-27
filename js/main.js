@@ -346,11 +346,126 @@ if (typeof cvData !== 'undefined' && document.getElementById('cv')) {
     });
   }
 
+  function cv2Section(title) {
+    const sec = document.createElement('section');
+    sec.className = 'cv2-section';
+    const h2 = document.createElement('h2');
+    h2.className = 'cv-sekce-nadpis';
+    const img = document.createElement('img');
+    img.src = 'assets/stars.png';
+    img.alt = '';
+    img.style.cssText = 'height: 3em; width: auto; float: right; margin-top: -1em;';
+    h2.textContent = title;
+    h2.appendChild(img);
+    sec.appendChild(h2);
+    return sec;
+  }
+
+  function renderCV2(lang) {
+    const existing = cvMain.querySelector('.cv2-wrapper');
+    if (existing) existing.remove();
+
+    const k2 = cvData[lang].kategorie2;
+    const wrapper = document.createElement('div');
+    wrapper.className = 'cv2-wrapper';
+
+    // Jazyky + Nástroje side by side
+    const rowTop = document.createElement('div');
+    rowTop.className = 'cv2-row';
+
+    const secJazyky = cv2Section(k2.nadpisy.jazyky);
+    const ulJazyky = document.createElement('ul');
+    ulJazyky.className = 'cv2-list cv2-list--two-col';
+    k2.jazyky.forEach(j => {
+      const li = document.createElement('li');
+      li.className = 'cv2-item';
+      li.innerHTML = '<span class="cv2-label">' + j.jazyk + '</span><span class="cv2-level">' + j.uroven + '</span>';
+      ulJazyky.appendChild(li);
+    });
+    secJazyky.appendChild(ulJazyky);
+
+    const secNastroje = cv2Section(k2.nadpisy.nastroje);
+    const ulNastroje = document.createElement('ul');
+    ulNastroje.className = 'cv2-list cv2-list--two-col';
+    k2.nastroje.forEach(n => {
+      const li = document.createElement('li');
+      li.className = 'cv2-item';
+      li.innerHTML = '<span class="cv2-label">' + n.nazev + '</span><span class="cv2-level">' + n.uroven + '</span>';
+      ulNastroje.appendChild(li);
+    });
+    secNastroje.appendChild(ulNastroje);
+
+    rowTop.appendChild(secJazyky);
+    rowTop.appendChild(secNastroje);
+    wrapper.appendChild(rowTop);
+
+    // Kompetence
+    const secKomp = cv2Section(k2.nadpisy.kompetence);
+    const tagsWrap = document.createElement('div');
+    tagsWrap.className = 'cv2-tags';
+    k2.kompetence.forEach(k => {
+      const tag = document.createElement('span');
+      tag.className = 'cv2-tag';
+      tag.textContent = k;
+      tagsWrap.appendChild(tag);
+    });
+    secKomp.appendChild(tagsWrap);
+    wrapper.appendChild(secKomp);
+
+    // Reference
+    const secRef = cv2Section(k2.nadpisy.reference);
+    const ulRef = document.createElement('ul');
+    ulRef.className = 'cv2-list';
+    k2.reference.forEach(r => {
+      const li = document.createElement('li');
+      li.className = 'cv2-item cv2-item--ref';
+      const nameSpan = document.createElement('span');
+      nameSpan.className = 'cv2-label';
+      nameSpan.textContent = r.jmeno;
+      const a = document.createElement('a');
+      a.href = 'mailto:' + r.email;
+      a.className = 'cv2-email';
+      a.textContent = r.email;
+      li.appendChild(nameSpan);
+      li.appendChild(a);
+      ulRef.appendChild(li);
+    });
+    secRef.appendChild(ulRef);
+    wrapper.appendChild(secRef);
+
+    // Publikace
+    const secPub = cv2Section(k2.nadpisy.publikace);
+    const ulPub = document.createElement('ul');
+    ulPub.className = 'cv2-list';
+    k2.publikace.forEach(p => {
+      const li = document.createElement('li');
+      li.className = 'cv2-item cv2-item--pub';
+      const a = document.createElement('a');
+      a.href = p.odkaz;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.className = 'cv2-pub-title';
+      a.textContent = p.nazev;
+      const source = document.createElement('span');
+      source.className = 'cv2-pub-source';
+      source.textContent = p.zdroj;
+      li.appendChild(a);
+      li.appendChild(source);
+      ulPub.appendChild(li);
+    });
+    secPub.appendChild(ulPub);
+    wrapper.appendChild(secPub);
+
+    cvMain.appendChild(wrapper);
+  }
+
   renderCV(currentLang);
+  renderCV2(currentLang);
 
   const origSetLang = setLang;
   setLang = function(lang) {
     origSetLang(lang);
     renderCV(lang);
+    renderCV2(lang);
   };
 }

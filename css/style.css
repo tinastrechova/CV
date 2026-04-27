@@ -289,6 +289,123 @@ body {
   pointer-events: none;
 }
 
+/* ── CV kategorie 2 ── */
+.cv2-wrapper {
+  margin-top: 48px;
+}
+
+.cv2-section {
+  margin-bottom: 40px;
+}
+
+.cv2-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 40px;
+}
+
+.cv2-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cv2-list--two-col .cv2-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  font-size: 15px;
+}
+
+.cv2-list--two-col .cv2-item:last-child {
+  border-bottom: none;
+}
+
+.cv2-label {
+  font-weight: 600;
+}
+
+.cv2-level {
+  color: #000;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.cv2-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.cv2-tag {
+  border: 1px solid #000;
+  padding: 4px 12px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.cv2-item--ref {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  font-size: 15px;
+}
+
+.cv2-item--ref:last-child {
+  border-bottom: none;
+}
+
+.cv2-email {
+  color: #000;
+  font-size: 13px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-top: 2px;
+}
+
+.cv2-email:hover {
+  opacity: 0.7;
+}
+
+.cv2-item--pub {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.cv2-item--pub:last-child {
+  border-bottom: none;
+}
+
+.cv2-pub-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cv2-pub-title:hover {
+  opacity: 0.7;
+}
+
+.cv2-pub-source {
+  font-size: 13px;
+  font-style: italic;
+  margin-top: 2px;
+}
+
+@media (max-width: 480px) {
+  .cv2-row {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ── CV page ── */
 #cv-title {
   font-family: 'Open Sans', sans-serif;

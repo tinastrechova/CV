@@ -40,7 +40,43 @@ const cvData = {
           { rok: "2026", nazev: "Komunitní akce DobroTechno", odkaz: null, specifikace: "Iniciátorka, koordinátorka a designérka sociální architektury", text: "DobroTechno je komunitní inkubátor postavený na principech dehierarchizovaného aktivismu a propojování sociálního kapitálu napříč generacemi. Jako spoluzakladatelka vnímám tento projekt jako svůj dosud nejkomplexnější designérský úkol: navrhuji udržitelnou a inkluzivní sociální architekturu, která propojuje denní program (workshopy, diskuse, péče) s benefiční akcí. Moje role zahrnuje vše od fundraisingu a technického zajištění až po koordinaci awareness týmu. Cílem projektu je vytvořit bezpečný prostor pro dobro družení, vzájemnou podporu a uplatnění individuálního talentu pro společné dobro v rámci brněnské komunity." }
         ]
       }
-    ]
+    ],
+    kategorie2: {
+      jazyky: [
+        { jazyk: "Čeština", uroven: "rodný jazyk" },
+        { jazyk: "Angličtina", uroven: "C1" },
+        { jazyk: "Španělština", uroven: "B1" },
+        { jazyk: "Estonština", uroven: "A1" },
+        { jazyk: "Nepálština", uroven: "A1" },
+        { jazyk: "Ruština", uroven: "A1" }
+      ],
+      nastroje: [
+        { nazev: "Figma", uroven: "Středně pokročilá" },
+        { nazev: "Condens", uroven: "Středně pokročilá" }
+      ],
+      kompetence: [
+        "Kreativita", "Designové myšlení", "Koordinace", "Empatie",
+        "Práce v týmu", "Zvědavost", "Zápal", "(Sociální) odpovědnost"
+      ],
+      reference: [
+        { jmeno: "doc. Mgr. Čeněk Šašinka, Ph.D.", email: "ceneksasinka@gmail.com" },
+        { jmeno: "doc. RNDr. Michal Černý, Ph.D.", email: "mcerny@phil.muni.cz" },
+        { jmeno: "Mgr. Alžběta Šašinková, Ph.D.", email: "asasinkova@phil.muni.cz" },
+        { jmeno: "PhDr. Ladislava Zbiejczuk Suchá, Ph.D.", email: "sucha@phil.muni.cz" },
+        { jmeno: "Mgr. Roman Sellner Novotný, Ph.D.", email: "rnovotny@phil.muni.cz" }
+      ],
+      publikace: [
+        { nazev: "Collaborative Immersive Virtual Environments in Geography Education on Climate Zones: A UX Case Study", zdroj: "ISPRS International Journal of Geo-Information", odkaz: "https://www.mdpi.com/2220-9964/14/12/455" },
+        { nazev: "Thus Spoke 01. Prufrock", zdroj: "Brno Arts Collective", odkaz: "https://www.instagram.com/p/DOBaUORCL1Q/" }
+      ],
+      nadpisy: {
+        jazyky: "Jazyky",
+        nastroje: "Nástroje",
+        kompetence: "Kompetence",
+        reference: "Reference",
+        publikace: "Publikace"
+      }
+    }
   },
   en: {
     kategorie1: [
@@ -83,6 +119,42 @@ const cvData = {
           { rok: "2026", nazev: "Community event DobroTechno", odkaz: null, specifikace: "Initiator, coordinator, and social architecture designer", text: "DobroTechno is a community incubator built on the principles of non-hierarchical activism and the connection of social capital across generations. As a co-founder, I see this project as my most complex design challenge to date: I am designing a sustainable and inclusive social architecture that connects the daily program (workshops, discussions, care) with a fundraising event. My role encompasses everything from fundraising and technical support to coordinating the awareness team. The project's goal is to create a safe space for the reproduction of goodness, mutual support, and the application of individual talents for the common good within the Brno community." }
         ]
       }
-    ]
+    ],
+    kategorie2: {
+      jazyky: [
+        { jazyk: "Czech", uroven: "native language" },
+        { jazyk: "English", uroven: "C1" },
+        { jazyk: "Spanish", uroven: "B1" },
+        { jazyk: "Estonian", uroven: "A1" },
+        { jazyk: "Nepali", uroven: "A1" },
+        { jazyk: "Russian", uroven: "A1" }
+      ],
+      nastroje: [
+        { nazev: "Figma", uroven: "Intermediate" },
+        { nazev: "Condens", uroven: "Intermediate" }
+      ],
+      kompetence: [
+        "Creativity", "Design thinking", "Coordination", "Empathy",
+        "Teamwork", "Curiosity", "Passion", "(Social) responsibility"
+      ],
+      reference: [
+        { jmeno: "doc. Mgr. Čeněk Šašinka, Ph.D.", email: "ceneksasinka@gmail.com" },
+        { jmeno: "doc. RNDr. Michal Černý, Ph.D.", email: "mcerny@phil.muni.cz" },
+        { jmeno: "Mgr. Alžběta Šašinková, Ph.D.", email: "asasinkova@phil.muni.cz" },
+        { jmeno: "PhDr. Ladislava Zbiejczuk Suchá, Ph.D.", email: "sucha@phil.muni.cz" },
+        { jmeno: "Mgr. Roman Sellner Novotný, Ph.D.", email: "rnovotny@phil.muni.cz" }
+      ],
+      publikace: [
+        { nazev: "Collaborative Immersive Virtual Environments in Geography Education on Climate Zones: A UX Case Study", zdroj: "ISPRS International Journal of Geo-Information", odkaz: "https://www.mdpi.com/2220-9964/14/12/455" },
+        { nazev: "Thus Spoke 01. Prufrock", zdroj: "Brno Arts Collective", odkaz: "https://www.instagram.com/p/DOBaUORCL1Q/" }
+      ],
+      nadpisy: {
+        jazyky: "Languages",
+        nastroje: "Tools",
+        kompetence: "Competencies",
+        reference: "References",
+        publikace: "Publications"
+      }
+    }
   }
 };
