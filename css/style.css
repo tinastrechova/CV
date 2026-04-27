@@ -289,17 +289,6 @@ body {
   pointer-events: none;
 }
 
-#cv-title-stars {
-  text-align: left;
-  margin-top: -20px;
-  margin-bottom: 20px;
-}
-
-#cv-title-stars img {
-  width: 150px;
-  height: auto;
-}
-
 /* ── CV kategorie 2 ── */
 .cv2-wrapper {
   margin-top: 48px;
@@ -428,14 +417,24 @@ body {
 }
 
 /* ── CV page ── */
+#cv-header {
+  display: flex;
+  align-items: flex-end;
+  margin: 150px 0 20px 0;
+}
+
 #cv-title {
   font-family: 'Open Sans', sans-serif;
   font-size: 120px;
   font-weight: 700;
-  text-align: center;
-  margin: 120px 0 40px 0;
-  padding: 20px 0;
   line-height: 1;
+  margin: 0;
+}
+
+#cv-stars {
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
 }
 
 #cv {
