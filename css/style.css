@@ -304,6 +304,37 @@ body {
   margin-bottom: 48px;
 }
 
+.cv-section-header {
+  cursor: pointer;
+  user-select: none;
+}
+
+.cv-section-body {
+  display: none;
+}
+
+.cv-section-body.open {
+  display: block;
+}
+
+.cv-section-arrow {
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.cv-section-arrow::before {
+  content: "›";
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.cv-section-header.open .cv-section-arrow::before {
+  transform: rotate(90deg);
+}
+
 .cv-sekce-nadpis {
   font-size: 24px;
   font-weight: 700;

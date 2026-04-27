@@ -220,14 +220,39 @@ if (typeof cvData !== 'undefined' && document.getElementById('cv')) {
 
   function renderCV(lang) {
     cvMain.innerHTML = '';
-    cvData[lang].kategorie1.forEach(sekce => {
+    cvData[lang].kategorie1.forEach((sekce, sIdx) => {
       const section = document.createElement('section');
       section.className = 'cv-sekce';
 
+      const isOpen = sIdx === 0;
+
+      // Section header
+      const sectionHeader = document.createElement('div');
+      sectionHeader.className = 'cv-section-header' + (isOpen ? ' open' : '');
+      sectionHeader.setAttribute('role', 'button');
+      sectionHeader.setAttribute('tabindex', '0');
+      sectionHeader.setAttribute('aria-expanded', String(isOpen));
+
       const h2 = document.createElement('h2');
       h2.className = 'cv-sekce-nadpis';
-      h2.innerHTML = sekce.sekce + ' <img src="assets/stars.png" alt="" style="height: 3em; width: auto; float: right; margin-top: -1em;">';
-      section.appendChild(h2);
+
+      const sectionArrow = document.createElement('span');
+      sectionArrow.className = 'cv-section-arrow';
+      h2.appendChild(sectionArrow);
+      h2.appendChild(document.createTextNode(sekce.sekce));
+
+      const starsImg = document.createElement('img');
+      starsImg.src = 'assets/stars.png';
+      starsImg.alt = '';
+      starsImg.style.cssText = 'height: 3em; width: auto; float: right; margin-top: -1em;';
+      h2.appendChild(starsImg);
+
+      sectionHeader.appendChild(h2);
+      section.appendChild(sectionHeader);
+
+      // Section body
+      const sectionBody = document.createElement('div');
+      sectionBody.className = 'cv-section-body' + (isOpen ? ' open' : '');
 
       const ul = document.createElement('ul');
       ul.className = 'cv-accordion';
@@ -300,8 +325,24 @@ if (typeof cvData !== 'undefined' && document.getElementById('cv')) {
         ul.appendChild(li);
       });
 
-      section.appendChild(ul);
+      sectionBody.appendChild(ul);
+      section.appendChild(sectionBody);
       cvMain.appendChild(section);
+
+      function toggleSection() {
+        const open = sectionBody.classList.contains('open');
+        sectionBody.classList.toggle('open', !open);
+        sectionHeader.classList.toggle('open', !open);
+        sectionHeader.setAttribute('aria-expanded', String(!open));
+      }
+
+      sectionHeader.addEventListener('click', toggleSection);
+      sectionHeader.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleSection();
+        }
+      });
     });
   }
 
