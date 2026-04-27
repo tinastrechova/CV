@@ -1,5 +1,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
+  position: relative;
 }
 
 /* ── Header ── */
@@ -290,7 +291,7 @@ body {
 }
 
 #cv-stars-left {
-  position: fixed;
+  position: absolute;
   left: 10px;
   bottom: 40px;
   width: 220px;
