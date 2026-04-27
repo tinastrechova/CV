@@ -226,7 +226,7 @@ if (typeof cvData !== 'undefined' && document.getElementById('cv')) {
 
       const h2 = document.createElement('h2');
       h2.className = 'cv-sekce-nadpis';
-      h2.textContent = sekce.sekce;
+      h2.innerHTML = sekce.sekce + ' <img src="assets/stars.png" alt="" style="height: 1em; width: auto; vertical-align: middle;">';
       section.appendChild(h2);
 
       const ul = document.createElement('ul');
