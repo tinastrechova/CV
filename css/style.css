@@ -418,9 +418,8 @@ body {
 
 /* ── CV page ── */
 #cv-header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  position: relative;
+  text-align: center;
   margin: 150px 0 20px 0;
 }
 
@@ -430,14 +429,15 @@ body {
   font-weight: 700;
   line-height: 1;
   margin: 0;
-  text-align: center;
+  display: inline-block;
 }
 
 #cv-stars {
+  position: absolute;
   width: 120px;
   height: auto;
-  margin-bottom: 10px;
-  margin-right: -10px;
+  bottom: 0;
+  left: calc(50% - 60px - 110px);
 }
 
 #cv {
