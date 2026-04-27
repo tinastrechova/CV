@@ -359,10 +359,12 @@ body {
 
 .cv-arrow::before {
   content: "›";
+  display: inline-block;
+  transition: transform 0.2s ease;
 }
 
 .cv-item.open .cv-arrow::before {
-  content: "v";
+  transform: rotate(90deg);
 }
 
 .cv-rok {
