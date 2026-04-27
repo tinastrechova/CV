@@ -291,9 +291,9 @@ body {
 
 #cv-stars-left {
   position: fixed;
-  left: 20px;
-  bottom: 100px;
-  width: 300px;
+  left: 10px;
+  bottom: 40px;
+  width: 220px;
   height: auto;
   transform: rotate(90deg);
   pointer-events: none;
