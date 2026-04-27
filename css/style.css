@@ -373,6 +373,8 @@ body {
   text-decoration: underline;
   text-underline-offset: 3px;
   margin-top: 2px;
+  display: block;
+  text-align: right;
 }
 
 .cv2-email:hover {
