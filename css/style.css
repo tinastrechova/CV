@@ -426,6 +426,14 @@ body {
   .cv2-row {
     grid-template-columns: 1fr;
   }
+  #cv-title {
+    font-size: 60px;
+  }
+  #cv-stars {
+    width: 60px;
+    bottom: -35px;
+    left: calc(50% - 30px - 55px);
+  }
 }
 
 /* ── CV page ── */
