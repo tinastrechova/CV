@@ -680,6 +680,7 @@ body {
   .cv-spec {
     text-align: left;
     width: 100%;
+    padding-left: calc(28px + 6px);
   }
 }
 @media (min-width: 1025px) {
@@ -852,6 +853,9 @@ body {
     margin: 8px 0 0 0;
     transform: rotate(90deg);
     pointer-events: none;
+  }
+  .cv-spec {
+    padding-left: calc(28px + 6px);
   }
 }
 
