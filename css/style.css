@@ -439,6 +439,11 @@ body {
     display: block !important;
     width: 100% !important;
   }
+  .cv2-email {
+    text-align: right !important;
+    display: block !important;
+    width: 100% !important;
+  }
 }
 
 /* ── CV page ── */
