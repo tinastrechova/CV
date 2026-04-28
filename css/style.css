@@ -649,6 +649,8 @@ body {
   font-size: 14px;
   font-style: italic;
   color: #000;
+  margin-left: auto;
+  text-align: right;
 }
 
 .cv-item-body {
