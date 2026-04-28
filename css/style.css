@@ -669,6 +669,13 @@ body {
     padding-top: 90px;
     padding-left: 16px;
     padding-right: 16px;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  #cv * {
+    max-width: 100%;
+    box-sizing: border-box;
   }
   .cv-item-trigger {
     display: flex;
