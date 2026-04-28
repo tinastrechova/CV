@@ -303,9 +303,13 @@ if (typeof cvData !== 'undefined' && document.getElementById('cv')) {
         const arrow = document.createElement('span');
         arrow.className = 'cv-arrow';
 
+        const arrowNazev = document.createElement('div');
+        arrowNazev.className = 'cv-arrow-nazev';
+        arrowNazev.appendChild(arrow);
+        arrowNazev.appendChild(nazev);
+
         trigger.appendChild(rok);
-        trigger.appendChild(arrow);
-        trigger.appendChild(nazev);
+        trigger.appendChild(arrowNazev);
         trigger.appendChild(spec);
 
         const body = document.createElement('div');
