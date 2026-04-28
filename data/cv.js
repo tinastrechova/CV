@@ -59,7 +59,7 @@ const cvData = {
       ],
       kompetence: [
         "Kreativita", "Designové myšlení", "Koordinace", "Empatie",
-        "Práce v týmu", "Zvědavost", "Zápal", "(Sociální) odpovědnost"
+        "Práce v týmu", "Zvědavost", "Zápal", "(Sociální) Odpovědnost"
       ],
       reference: [
         { jmeno: "doc. Mgr. Čeněk Šašinka, Ph.D.", email: "ceneksasinka@gmail.com", popis: "Vedoucí mé bakalářské práce a spoluautor článku z ní vzešlého. Výzkumník v oblasti vizuální kognice a VR na FF MUNI." },
@@ -141,7 +141,7 @@ const cvData = {
       ],
       kompetence: [
         "Creativity", "Design thinking", "Coordination", "Empathy",
-        "Teamwork", "Curiosity", "Passion", "(Social) responsibility"
+        "Teamwork", "Curiosity", "Passion", "(Social) Responsibility"
       ],
       reference: [
         { jmeno: "doc. Mgr. Čeněk Šašinka, Ph.D.", email: "ceneksasinka@gmail.com", popis: "Supervisor of my bachelor's thesis and co-author of the resulting article. Researcher in visual cognition and VR at FF MUNI." },
