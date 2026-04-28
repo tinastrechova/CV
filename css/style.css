@@ -450,6 +450,9 @@ body {
     height: 2em;
     margin-top: -0.5em;
   }
+  .cv-sekce-nadpis {
+    font-size: 18px;
+  }
 }
 
 /* ── CV page ── */
