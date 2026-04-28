@@ -427,7 +427,7 @@ body {
     grid-template-columns: 1fr;
   }
   #cv-title {
-    font-size: 60px;
+    font-size: 60px !important;
   }
   #cv-stars {
     width: 60px;
