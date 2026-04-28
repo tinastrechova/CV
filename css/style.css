@@ -601,6 +601,8 @@ body {
   font-weight: 700;
   line-height: 2;
   flex-shrink: 0;
+  margin-top: 2px;
+  align-self: flex-start;
 }
 
 .cv-arrow::before {
