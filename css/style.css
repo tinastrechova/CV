@@ -293,7 +293,7 @@ body {
 #cv-stars-left {
   position: absolute;
   left: 10px;
-  bottom: -160px;
+  bottom: -360px;
   width: 220px;
   height: auto;
   transform: rotate(90deg);
