@@ -1045,3 +1045,33 @@ body {
     aspect-ratio: 1 / 1;
   }
 }
+
+@media (max-width: 480px) {
+  #contacts-title {
+    font-size: 60px !important;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+  #contacts-header {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .contacts-layout {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .contacts-photo {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 20px auto;
+    display: block;
+  }
+  .contacts-info {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
