@@ -673,14 +673,23 @@ body {
   .cv-item-trigger {
     flex-wrap: wrap;
     gap: 4px 12px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
   .cv-rok {
     min-width: auto;
   }
+  .cv-nazev {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
   .cv-spec {
     text-align: left;
     width: 100%;
-    padding-left: calc(28px + 6px);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    padding-left: 34px;
   }
 }
 @media (min-width: 1025px) {
@@ -855,7 +864,18 @@ body {
     pointer-events: none;
   }
   .cv-spec {
-    padding-left: calc(28px + 6px);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    padding-left: 34px;
+  }
+  .cv-item-trigger {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .cv-nazev {
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 }
 
