@@ -708,6 +708,10 @@ body {
     text-align: right;
     margin-left: auto;
   }
+  .cv2-level {
+    text-align: right;
+    margin-left: auto;
+  }
 }
 @media (min-width: 1025px) {
   .cv-item-trigger {
