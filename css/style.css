@@ -679,6 +679,8 @@ body {
   }
   #cv-header {
     margin-bottom: -20px;
+    margin-left: 0;
+    margin-right: 0;
   }
   .cv-item-trigger {
     display: flex;
