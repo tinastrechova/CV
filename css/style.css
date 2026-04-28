@@ -434,6 +434,11 @@ body {
     bottom: -35px !important;
     left: calc(50% - 30px - 55px) !important;
   }
+  .cv-reference-email {
+    text-align: right !important;
+    display: block !important;
+    width: 100% !important;
+  }
 }
 
 /* ── CV page ── */
