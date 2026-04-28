@@ -704,6 +704,10 @@ body {
     width: 100%;
     box-sizing: border-box;
   }
+  .cv2-nastroje-uroven {
+    text-align: right;
+    margin-left: auto;
+  }
 }
 @media (min-width: 1025px) {
   .cv-item-trigger {
