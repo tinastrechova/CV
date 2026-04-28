@@ -569,10 +569,10 @@ body {
 }
 
 .cv-item-trigger {
-  display: grid;
-  grid-template-columns: 80px auto 1fr;
-  align-items: baseline;
-  gap: 0 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
   width: 100%;
   background: none;
   border: none;
@@ -615,13 +615,11 @@ body {
 }
 
 .cv-rok {
-  grid-column: 1;
   font-size: 14px;
   color: #000;
 }
 
 .cv-arrow-nazev {
-  grid-column: 2;
   display: flex;
   align-items: baseline;
   gap: 6px;
@@ -645,12 +643,9 @@ body {
 }
 
 .cv-spec {
-  grid-column: 3;
   font-size: 14px;
   font-style: italic;
   color: #000;
-  margin-left: auto;
-  text-align: right;
 }
 
 .cv-item-body {
@@ -687,6 +682,26 @@ body {
     width: 100%;
   }
 }
+@media (min-width: 1025px) {
+  .cv-item-trigger {
+    display: grid;
+    grid-template-columns: 80px auto 1fr;
+    align-items: baseline;
+    gap: 0 12px;
+  }
+  .cv-rok {
+    grid-column: 1;
+  }
+  .cv-arrow-nazev {
+    grid-column: 2;
+  }
+  .cv-spec {
+    grid-column: 3;
+    margin-left: auto;
+    text-align: right;
+  }
+}
+
 /* ── End CV page ── */
 
 @media (max-width: 480px) {
