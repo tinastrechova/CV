@@ -620,6 +620,12 @@ body {
   min-width: 80px;
 }
 
+.cv-arrow-nazev {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
 .cv-nazev {
   font-size: 16px;
   font-weight: 700;
