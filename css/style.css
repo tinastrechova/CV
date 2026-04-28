@@ -787,3 +787,9 @@ body {
     position: relative;
   }
 }
+
+@media (max-width: 1024px) {
+  #cv-stars-left {
+    display: none;
+  }
+}
