@@ -430,9 +430,9 @@ body {
     font-size: 60px !important;
   }
   #cv-stars {
-    width: 60px;
-    bottom: -35px;
-    left: calc(50% - 30px - 55px);
+    width: 60px !important;
+    bottom: -35px !important;
+    left: calc(50% - 30px - 55px) !important;
   }
 }
 
