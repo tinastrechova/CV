@@ -267,7 +267,7 @@ if (typeof cvData !== 'undefined' && document.getElementById('cv')) {
       const ul = document.createElement('ul');
       ul.className = 'cv-accordion';
 
-      sekce.polozky.forEach((polozka, i) => {
+      sekce.polozky.slice().reverse().forEach((polozka, i) => {
         const li = document.createElement('li');
         li.className = 'cv-item';
         const bodyId = 'cv-body-' + i + '-' + sekce.sekce.replace(/\s/g, '-');
