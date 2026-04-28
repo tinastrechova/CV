@@ -537,8 +537,6 @@ body {
 .cv-sekce-hvezda {
   height: 3em;
   width: auto;
-  float: right;
-  margin-top: -1em;
 }
 
 .cv-accordion {

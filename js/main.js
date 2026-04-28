@@ -235,16 +235,26 @@ if (typeof cvData !== 'undefined' && document.getElementById('cv')) {
 
       const h2 = document.createElement('h2');
       h2.className = 'cv-sekce-nadpis';
+      h2.style.display = 'flex';
+      h2.style.justifyContent = 'space-between';
+      h2.style.alignItems = 'flex-end';
 
       const sectionArrow = document.createElement('span');
       sectionArrow.className = 'cv-section-arrow';
-      h2.appendChild(sectionArrow);
-      h2.appendChild(document.createTextNode(sekce.sekce));
+      const textSpan = document.createElement('span');
+      textSpan.textContent = sekce.sekce;
+      const leftPart = document.createElement('span');
+      leftPart.style.display = 'flex';
+      leftPart.style.alignItems = 'flex-end';
+      leftPart.style.gap = '4px';
+      leftPart.appendChild(sectionArrow);
+      leftPart.appendChild(textSpan);
 
       const starsImg = document.createElement('img');
       starsImg.src = 'assets/stars.png';
       starsImg.alt = '';
       starsImg.className = 'cv-sekce-hvezda';
+      h2.appendChild(leftPart);
       h2.appendChild(starsImg);
 
       sectionHeader.appendChild(h2);
@@ -351,11 +361,16 @@ if (typeof cvData !== 'undefined' && document.getElementById('cv')) {
     sec.className = 'cv2-section';
     const h2 = document.createElement('h2');
     h2.className = 'cv-sekce-nadpis';
+    h2.style.display = 'flex';
+    h2.style.justifyContent = 'space-between';
+    h2.style.alignItems = 'flex-end';
+    const titleSpan = document.createElement('span');
+    titleSpan.textContent = title;
     const img = document.createElement('img');
     img.src = 'assets/stars.png';
     img.alt = '';
     img.className = 'cv-sekce-hvezda';
-    h2.textContent = title;
+    h2.appendChild(titleSpan);
     h2.appendChild(img);
     sec.appendChild(h2);
     return sec;
@@ -373,16 +388,26 @@ if (typeof cvData !== 'undefined' && document.getElementById('cv')) {
 
     const h2 = document.createElement('h2');
     h2.className = 'cv-sekce-nadpis';
+    h2.style.display = 'flex';
+    h2.style.justifyContent = 'space-between';
+    h2.style.alignItems = 'flex-end';
 
     const arrow = document.createElement('span');
     arrow.className = 'cv-section-arrow';
-    h2.appendChild(arrow);
-    h2.appendChild(document.createTextNode(title));
+    const titleSpan2 = document.createElement('span');
+    titleSpan2.textContent = title;
+    const leftPart2 = document.createElement('span');
+    leftPart2.style.display = 'flex';
+    leftPart2.style.alignItems = 'flex-end';
+    leftPart2.style.gap = '4px';
+    leftPart2.appendChild(arrow);
+    leftPart2.appendChild(titleSpan2);
 
     const img = document.createElement('img');
     img.src = 'assets/stars.png';
     img.alt = '';
     img.className = 'cv-sekce-hvezda';
+    h2.appendChild(leftPart2);
     h2.appendChild(img);
 
     header.appendChild(h2);
