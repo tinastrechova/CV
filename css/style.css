@@ -569,9 +569,10 @@ body {
 }
 
 .cv-item-trigger {
-  display: flex;
+  display: grid;
+  grid-template-columns: 80px auto 1fr;
   align-items: baseline;
-  gap: 12px;
+  gap: 0 12px;
   width: 100%;
   background: none;
   border: none;
@@ -596,13 +597,11 @@ body {
 
 .cv-arrow {
   display: inline-block;
-  margin: 0 8px;
+  margin: 0 8px 0 0;
   font-size: 28px;
   font-weight: 700;
   line-height: 1;
-  flex-shrink: 0;
-  margin-top: -3px;
-  align-self: flex-start;
+  align-self: baseline;
 }
 
 .cv-arrow::before {
@@ -616,15 +615,15 @@ body {
 }
 
 .cv-rok {
-  flex-shrink: 0;
+  grid-column: 1;
   font-size: 14px;
   color: #000;
-  min-width: 80px;
 }
 
 .cv-arrow-nazev {
+  grid-column: 2;
   display: flex;
-  align-items: flex-start;
+  align-items: baseline;
   gap: 6px;
 }
 
@@ -646,11 +645,10 @@ body {
 }
 
 .cv-spec {
+  grid-column: 3;
   font-size: 14px;
   font-style: italic;
   color: #000;
-  flex-shrink: 0;
-  text-align: right;
 }
 
 .cv-item-body {
