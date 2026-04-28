@@ -446,6 +446,10 @@ body {
     display: block !important;
     width: 100% !important;
   }
+  .cv-sekce-hvezda {
+    height: 2em;
+    margin-top: -0.5em;
+  }
 }
 
 /* ── CV page ── */
@@ -525,6 +529,13 @@ body {
   color: #000;
   border-bottom: 2px solid #000;
   padding-bottom: 8px;
+}
+
+.cv-sekce-hvezda {
+  height: 3em;
+  width: auto;
+  float: right;
+  margin-top: -1em;
 }
 
 .cv-accordion {

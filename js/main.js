@@ -244,7 +244,7 @@ if (typeof cvData !== 'undefined' && document.getElementById('cv')) {
       const starsImg = document.createElement('img');
       starsImg.src = 'assets/stars.png';
       starsImg.alt = '';
-      starsImg.style.cssText = 'height: 3em; width: auto; float: right; margin-top: -1em;';
+      starsImg.className = 'cv-sekce-hvezda';
       h2.appendChild(starsImg);
 
       sectionHeader.appendChild(h2);
@@ -354,7 +354,7 @@ if (typeof cvData !== 'undefined' && document.getElementById('cv')) {
     const img = document.createElement('img');
     img.src = 'assets/stars.png';
     img.alt = '';
-    img.style.cssText = 'height: 3em; width: auto; float: right; margin-top: -1em;';
+    img.className = 'cv-sekce-hvezda';
     h2.textContent = title;
     h2.appendChild(img);
     sec.appendChild(h2);
@@ -382,7 +382,7 @@ if (typeof cvData !== 'undefined' && document.getElementById('cv')) {
     const img = document.createElement('img');
     img.src = 'assets/stars.png';
     img.alt = '';
-    img.style.cssText = 'height: 3em; width: auto; float: right; margin-top: -1em;';
+    img.className = 'cv-sekce-hvezda';
     h2.appendChild(img);
 
     header.appendChild(h2);
