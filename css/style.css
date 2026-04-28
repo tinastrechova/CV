@@ -678,7 +678,7 @@ body {
     box-sizing: border-box;
   }
   #cv-header {
-    margin-bottom: 10px;
+    margin-bottom: -20px;
   }
   .cv-item-trigger {
     display: flex;
