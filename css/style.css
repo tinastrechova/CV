@@ -944,6 +944,24 @@ body {
 }
 
 /* ── Contacts page ── */
+#contacts-stars-left {
+  position: absolute;
+  left: calc(-25vw + 25px);
+  bottom: -60px;
+  width: 300px;
+  height: auto;
+  transform: rotate(90deg);
+  pointer-events: none;
+  z-index: 10;
+}
+
+@media (max-width: 1024px) {
+  #contacts-stars-left {
+    display: none;
+  }
+}
+
+
 #contacts-header {
   text-align: center;
   margin: 150px 0 20px 0;
