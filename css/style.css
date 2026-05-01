@@ -591,8 +591,8 @@ body {
 
 .cv-item-trigger:focus,
 .cv-item-trigger:focus-visible {
-  outline: none !important;
-  border: none;
+  outline: 2px solid #000;
+  outline-offset: 2px;
 }
 
 .cv-arrow {
@@ -1115,6 +1115,24 @@ body {
   border-radius: 0 0 4px 4px;
 }
 
+.cv-section-header:focus,
+.cv-section-header:focus-visible,
+#menu-btn:focus,
+#menu-btn:focus-visible,
+#lang-toggle:focus,
+#lang-toggle:focus-visible,
+#lang-cz:focus,
+#lang-en:focus,
+.contact-row:focus,
+.contact-row:focus-visible,
+#audio-btn:focus,
+#audio-btn:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
 .skip-link:focus {
   top: 0;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
