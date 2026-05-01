@@ -14,6 +14,11 @@ function setLang(lang) {
   if (typeof milniky !== 'undefined' && document.getElementById('milestone-section')) {
     zobrazMilnik(currentIndex, currentLang);
   }
+  if (window.location.pathname.includes('contacts.html')) {
+    document.title = lang === 'cz'
+      ? 'Kontakty — MarTina Střechová'
+      : 'Contacts — MarTina Střechová';
+  }
 }
 
 setLang(currentLang);
