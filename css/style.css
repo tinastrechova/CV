@@ -1115,8 +1115,11 @@ body {
 
 .skip-link {
   position: absolute;
-  top: -100px;
-  left: 16px;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
   background: #000;
   color: #fff;
   padding: 8px 16px;
@@ -1144,7 +1147,11 @@ body {
 }
 
 .skip-link:focus {
+  left: 16px;
   top: 0;
+  width: auto;
+  height: auto;
+  overflow: visible;
   outline: 2px solid #fff;
   outline-offset: 2px;
 }
