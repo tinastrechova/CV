@@ -985,8 +985,11 @@ body {
 
 #contacts-layout {
   display: flex;
-  gap: 60px;
+  justify-content: center;
   align-items: flex-start;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 #contacts-photo {
