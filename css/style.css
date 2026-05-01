@@ -945,9 +945,9 @@ body {
 
 /* ── Contacts page ── */
 #contacts-stars-left {
-  position: absolute;
-  left: calc(-25vw + 25px);
-  bottom: 20px;
+  position: fixed;
+  left: 10px;
+  bottom: 40px;
   width: 300px;
   height: auto;
   transform: rotate(90deg);
