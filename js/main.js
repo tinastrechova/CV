@@ -295,10 +295,10 @@ if (typeof cvData !== 'undefined' && document.getElementById('cv')) {
           a.href = polozka.odkaz;
           a.target = '_blank';
           a.rel = 'noopener noreferrer';
-          a.textContent = polozka.nazev;
+          a.innerHTML = polozka.nazev;
           nazev.appendChild(a);
         } else {
-          nazev.textContent = polozka.nazev;
+          nazev.innerHTML = polozka.nazev;
         }
 
         const spec = document.createElement('span');
