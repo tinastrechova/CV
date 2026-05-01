@@ -5,6 +5,7 @@ let currentLang  = localStorage.getItem('lang') || 'cz';
 let currentIndex = 0;
 
 function setLang(lang) {
+  document.documentElement.lang = lang === 'cz' ? 'cs' : 'en';
   currentLang = lang;
   localStorage.setItem('lang', lang);
   btnToggle.textContent = lang === 'cz' ? 'CZ' : 'EN';
@@ -115,6 +116,8 @@ function zobrazMilnik(index, jazyk) {
   document.getElementById('milestone-rok').textContent  = milnik.rok;
   document.getElementById('milestone-nadpis').innerHTML = milnik.nadpis;
   document.getElementById('milestone-text').innerHTML   = milnik.text;
+  const head = document.getElementById('timeline-head');
+  if (head) head.setAttribute('aria-valuenow', index);
 
   const player = document.getElementById('audio-player');
   const btn    = document.getElementById('audio-btn');
@@ -132,18 +135,23 @@ if (typeof milniky !== 'undefined' && document.getElementById('milestone-section
   const audioPlayer = document.getElementById('audio-player');
   const audioBtn    = document.getElementById('audio-btn');
 
+  audioBtn.setAttribute('aria-label', 'Přehrát audio');
+
   audioBtn.addEventListener('click', () => {
     if (audioPlayer.paused) {
       audioPlayer.play();
       audioBtn.textContent = '⏸';
+      audioBtn.setAttribute('aria-label', 'Pozastavit audio');
     } else {
       audioPlayer.pause();
       audioBtn.innerHTML = '<img src="assets/Sound.svg" alt="Přehrát audio" style="height: 1.5rem; width: auto;">';
+      audioBtn.setAttribute('aria-label', 'Přehrát audio');
     }
   });
 
   audioPlayer.addEventListener('ended', () => {
     audioBtn.innerHTML = '<img src="assets/Sound.svg" alt="Přehrát audio" style="height: 1.5rem; width: auto;">';
+    audioBtn.setAttribute('aria-label', 'Přehrát audio');
   });
 
   // ── Timeline ──
