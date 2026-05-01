@@ -947,7 +947,7 @@ body {
 #contacts-stars-left {
   position: absolute;
   left: calc(-25vw + 25px);
-  bottom: -60px;
+  bottom: 20px;
   width: 300px;
   height: auto;
   transform: rotate(90deg);
