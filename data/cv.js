@@ -74,12 +74,19 @@ const cvData = {
         { nazev: "Collaborative Immersive Virtual Environments in Geography Education on Climate Zones: A UX Case Study", zdroj: "ISPRS International Journal of Geo-Information", odkaz: "https://www.mdpi.com/2220-9964/14/12/455" },
         { nazev: "Thus Spoke 01. Prufrock", zdroj: "Brno Arts Collective", odkaz: "https://www.instagram.com/p/DOBaUORCL1Q/" }
       ],
+      publikaceVProcesu: [
+        { nazev: "Ethical Aspects of Education Immersive eXtended Reality Technologies in the 21st century", zdroj: "Systematic Literature Review", odkaz: null },
+        { nazev: "Exploring ASP's role in young people's sense of belonging", zdroj: "Horizon Europe project", odkaz: null },
+        { nazev: "Whose Future Is It? Transition Design Students Confront a National Ban on Youth Social Media", zdroj: null, odkaz: null },
+        { nazev: "Cohabitation and Confrontation: An Annotated Portfolio of Four Design Probes", zdroj: null, odkaz: null }
+      ],
       nadpisy: {
         jazyky: "Jazyky",
         nastroje: "Nástroje",
         kompetence: "Kompetence",
         reference: "Reference",
-        publikace: "Publikace"
+        publikace: "Publikace",
+        publikaceVProcesu: "Publikace v procesu"
       }
     }
   },
@@ -158,12 +165,19 @@ const cvData = {
         { nazev: "Collaborative Immersive Virtual Environments in Geography Education on Climate Zones: A UX Case Study", zdroj: "ISPRS International Journal of Geo-Information", odkaz: "https://www.mdpi.com/2220-9964/14/12/455" },
         { nazev: "Thus Spoke 01. Prufrock", zdroj: "Brno Arts Collective", odkaz: "https://www.instagram.com/p/DOBaUORCL1Q/" }
       ],
+      publikaceVProcesu: [
+        { nazev: "Ethical Aspects of Education Immersive eXtended Reality Technologies in the 21st century", zdroj: "Systematic Literature Review", odkaz: null },
+        { nazev: "Exploring ASP's role in young people's sense of belonging", zdroj: "Horizon Europe project", odkaz: null },
+        { nazev: "Whose Future Is It? Transition Design Students Confront a National Ban on Youth Social Media", zdroj: null, odkaz: null },
+        { nazev: "Cohabitation and Confrontation: An Annotated Portfolio of Four Design Probes", zdroj: null, odkaz: null }
+      ],
       nadpisy: {
         jazyky: "Languages",
         nastroje: "Tools",
         kompetence: "Competencies",
         reference: "References",
-        publikace: "Publications"
+        publikace: "Publications",
+        publikaceVProcesu: "Publications in process"
       }
     }
   }

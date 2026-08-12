@@ -545,6 +545,42 @@ if (typeof cvData !== 'undefined' && document.getElementById('cv')) {
       ulPub.appendChild(li);
     });
     bodyPub.appendChild(ulPub);
+
+    if (k2.publikaceVProcesu && k2.publikaceVProcesu.length) {
+      const h3 = document.createElement('h3');
+      h3.className = 'cv2-subsection-title';
+      h3.textContent = k2.nadpisy.publikaceVProcesu;
+      bodyPub.appendChild(h3);
+      const ulPubProc = document.createElement('ul');
+      ulPubProc.className = 'cv2-list';
+      k2.publikaceVProcesu.forEach(p => {
+        const li = document.createElement('li');
+        li.className = 'cv2-item cv2-item--pub';
+        if (p.odkaz) {
+          const a = document.createElement('a');
+          a.href = p.odkaz;
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+          a.className = 'cv2-pub-title';
+          a.textContent = p.nazev;
+          li.appendChild(a);
+        } else {
+          const span = document.createElement('span');
+          span.className = 'cv2-pub-title';
+          span.textContent = p.nazev;
+          li.appendChild(span);
+        }
+        if (p.zdroj) {
+          const source = document.createElement('span');
+          source.className = 'cv2-pub-source';
+          source.textContent = p.zdroj;
+          li.appendChild(source);
+        }
+        ulPubProc.appendChild(li);
+      });
+      bodyPub.appendChild(ulPubProc);
+    }
+
     wrapper.appendChild(secPub);
 
     cvMain.appendChild(wrapper);
